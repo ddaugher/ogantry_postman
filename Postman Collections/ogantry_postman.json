@@ -2607,7 +2607,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/alerts"
+            "url": "{{host}}/api/v1/alerts",
+            "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|id|yes|\n|key|string|body|key|yes\n|message|string|body|message|yes\n|name|string|body|name|yes\n|response|string|body|response|no\n|type|string|body|type|yes\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/alerts/{{id}}\n```"
           },
           "response": [
             {
@@ -2978,7 +2979,30 @@
           "response": []
         }
       ],
-      "_postman_id": "1477e9fd-d452-4316-8172-379edcccd639"
+      "_postman_id": "1477e9fd-d452-4316-8172-379edcccd639",
+      "description": "## Description\nThe Customer Contacts API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the customer endpoints.\n\n## Model\n| Key        | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|comment|string|comment associated with contact|no|yes|5|1000\n|email|string|contact email|no|yes|6|254\n|is_primary|boolean|defines 'if' primary contact for the customer|no|yes||\n|name|string|contact name|no|yes|5|255\n|phone|string|contact phone number|no|no|n/a|30\n|title|string|contact title|no|no|5|255\n|customer_id|integer|customer id contact is associated|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "0b4d4e91-9355-4cfd-9579-1a4d1e9e2183",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "dd191a3b-484f-4be3-aabf-2d4bee806f4f",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "project_contacts",
