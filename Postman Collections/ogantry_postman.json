@@ -989,7 +989,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"comment here\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"name\": \"name here\",\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+              "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
