@@ -4226,7 +4226,7 @@
               }
             ],
             "url": "{{host}}/api/v1/contacts/customer/3",
-            "description": "Get a specific project contact."
+            "description": "Get a specific project contact.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|contact id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/project/1\n```"
           },
           "response": [
             {
