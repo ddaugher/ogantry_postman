@@ -4913,7 +4913,7 @@
       "name": "projects",
       "item": [
         {
-          "name": "search",
+          "name": "list",
           "_postman_id": "22429922-0b18-46da-a40b-742c99df2c41",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
