@@ -3879,7 +3879,7 @@
       "name": "project_contacts",
       "item": [
         {
-          "name": "search",
+          "name": "list",
           "_postman_id": "9c49b8f1-dd82-4e31-ac1a-715aff7572b0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
