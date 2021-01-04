@@ -960,7 +960,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"querystring123\",\n        \"user_id\": 1\n    }\n}",
+              "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -968,7 +968,7 @@
               }
             },
             "url": "{{host}}/api/v1/query_filters/{{id}}",
-            "description": "Update a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|is_shared|boolean|body|indicates whether query filter is shared with other users|\n|resource|string|body|resource the query string is associated, this is determined by the client|\n|query_string|string|body|url query string|\n|name|string|body|name for saved query string|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```\n\n## Expected \"Body\" structure\n\n```\n{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}\n```"
+            "description": "Update a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|is_shared|boolean|body|indicates whether query filter is shared with other users|\n|resource|string|body|resource the query string is associated, this is determined by the client|\n|query_string|string|body|url query string|\n|name|string|body|name for saved query string|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```"
           },
           "response": []
         },
