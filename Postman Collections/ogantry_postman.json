@@ -2862,7 +2862,153 @@
             "url": "{{host}}/api/v1/contacts/customer",
             "description": "Lists all alerts.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Equal-to filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|customer_name|string|query|customer name associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nThe 'equal-to' filters will only find exact matches for the filter requested.  Partial names and non-exact matches will not be returned.\n\nExample URL w/ query params:\n```\n{{host}}/api/v1/contacts/customer?name=sprite\n```\n\n## String-starts-with filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|customer_name_prefix|string|query|customer name associated with contact|\n|email_prefix|string|query|email address|\n|name_prefix|string|query|contact name|\n|title_prefix|string|query|contact title|\n\nThe 'string-starts-with' filters will return all customers where the 'name_prefix' string value matches the first characters exactly for the customer name\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_prefix=AEP\n```\n\n## String-contains filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|customer_name_search|string|query|customer name associated with contact|\n|email_search|string|query|email address|\n|name_search|string|query|contact name|\n|title_search|string|query|contact title|\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_search=tion\n```\n\n## Order-by sorting\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|customer_name|string|query|customer name associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?order_by=asc:name\n```\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?offset=2\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "525347f3-8890-4116-92f9-f15361d36be0",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:17:25 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnVs44v9C1Qd8AAAAH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "a409e722-f340-4097-92bc-6aa5c36b2248",
+              "name": "200 OK - No results found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "55"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:19:38 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcndd9_EGhtlCsAAADE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"No results found\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "641aa5c2-a462-4722-b911-39558daf5078",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "296"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:24:27 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnuQhZm8hCKvYAAAGB"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "1"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"customer_contacts\": [\n            {\n                \"customer_contact\": {\n                    \"comment\": \"comment here\",\n                    \"customer\": {\n                        \"id\": 1,\n                        \"ref\": \"/api/v1/customers/1\"\n                    },\n                    \"email\": \"a@a.com\",\n                    \"id\": 2,\n                    \"is_primary\": true,\n                    \"name\": \"name here\",\n                    \"phone\": \"2345678902\",\n                    \"ref\": \"/api/v1/contacts/customer/2\",\n                    \"title\": \"title here\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "count",
@@ -2880,9 +3026,155 @@
               }
             ],
             "url": "{{host}}/api/v1/contacts/customer",
-            "description": "Lists all alerts.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Equal-to filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|customer_name|string|query|customer name associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nThe 'equal-to' filters will only find exact matches for the filter requested.  Partial names and non-exact matches will not be returned.\n\nExample URL w/ query params:\n```\n{{host}}/api/v1/contacts/customer?name=sprite\n```\n\n## String-starts-with filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|customer_name_prefix|string|query|customer name associated with contact|\n|email_prefix|string|query|email address|\n|name_prefix|string|query|contact name|\n|title_prefix|string|query|contact title|\n\nThe 'string-starts-with' filters will return all customers where the 'name_prefix' string value matches the first characters exactly for the customer name\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_prefix=AEP\n```\n\n## String-contains filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|customer_name_search|string|query|customer name associated with contact|\n|email_search|string|query|email address|\n|name_search|string|query|contact name|\n|title_search|string|query|contact title|\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_search=tion\n```\n\n## Order-by sorting\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|customer_name|string|query|customer name associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?order_by=asc:name\n```\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?offset=2\n```"
+            "description": "Count all alerts.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Equal-to filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|customer_name|string|query|customer name associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nThe 'equal-to' filters will only find exact matches for the filter requested.  Partial names and non-exact matches will not be returned.\n\nExample URL w/ query params:\n```\n{{host}}/api/v1/contacts/customer?name=sprite\n```\n\n## String-starts-with filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|customer_name_prefix|string|query|customer name associated with contact|\n|email_prefix|string|query|email address|\n|name_prefix|string|query|contact name|\n|title_prefix|string|query|contact title|\n\nThe 'string-starts-with' filters will return all customers where the 'name_prefix' string value matches the first characters exactly for the customer name\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_prefix=AEP\n```\n\n## String-contains filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|customer_name_search|string|query|customer name associated with contact|\n|email_search|string|query|email address|\n|name_search|string|query|contact name|\n|title_search|string|query|contact title|\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_search=tion\n```\n\n## Order-by sorting\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|customer_name|string|query|customer name associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?order_by=asc:name\n```\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/contacts/customer?offset=2\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5c93402b-6e47-481d-9edd-d1c6748bdf63",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:18:08 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnYOXwucDC8-wAAABC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "3e7c321a-24f2-468b-8732-125ead9c8676",
+              "name": "200 OK - No results found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "55"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:20:43 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnhQkaYPjqi60AAACC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"No results found\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "6dae81bb-4025-4d20-a34f-18ed1ff5cf5c",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "296"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:24:15 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcntjkrdJDQ5ckAAAFB"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "1"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"customer_contacts\": [\n            {\n                \"customer_contact\": {\n                    \"comment\": \"comment here\",\n                    \"customer\": {\n                        \"id\": 1,\n                        \"ref\": \"/api/v1/customers/1\"\n                    },\n                    \"email\": \"a@a.com\",\n                    \"id\": 2,\n                    \"is_primary\": true,\n                    \"name\": \"name here\",\n                    \"phone\": \"2345678902\",\n                    \"ref\": \"/api/v1/contacts/customer/2\",\n                    \"title\": \"title here\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "get",
@@ -2902,7 +3194,149 @@
             "url": "{{host}}/api/v1/contacts/customer/3",
             "description": "Gets a specific customer contact.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/1\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "e2364552-4348-428e-b3f0-6683e9dd6633",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer/3"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:18:30 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnZhTpLZhDpzwAAAYJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "fd37ca26-83fe-4a67-b38c-124375faa075",
+              "name": "404 Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer/3"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "74"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:20:28 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcngZR7hMjgb_gAAACB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"Unable to retrieve customer_contact\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "170da851-27e9-4878-91c6-7c1083f46815",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer/2"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "311"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:24:01 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnsxUYh4A2QN4AAAEB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"customer_contact\": {\n            \"comment\": \"comment here\",\n            \"customer\": {\n                \"id\": 1,\n                \"ref\": \"/api/v1/customers/1\"\n            },\n            \"email\": \"a@a.com\",\n            \"id\": 2,\n            \"is_primary\": true,\n            \"name\": \"name here\",\n            \"phone\": \"2345678902\",\n            \"ref\": \"/api/v1/contacts/customer/2\",\n            \"title\": \"title here\"\n        }\n    },\n    \"message\": \"customer_contact retrieved successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "delete",
@@ -2922,7 +3356,102 @@
             "url": "{{host}}/api/v1/contacts/customer/1",
             "description": "Delete a specific customer contact.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "7d56f568-cf68-4590-aa2b-b63a4f204532",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer/1"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:18:42 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnaNNJWDj-qaMAAAZJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "193c4771-e717-40dc-a449-94ccb4970531",
+              "name": "200 OK - Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/contacts/customer/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "76"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:23:22 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcnqjgtc2DpNS8AAANF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"customer_contact deleted successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "update",
@@ -2951,7 +3480,176 @@
             "url": "{{host}}/api/v1/contacts/customer/3",
             "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "3af9b392-b892-4984-80a5-5c46483f96a8",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"udpated comment\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"name\": \"name there\",\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/contacts/customer/3"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:18:54 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcna5wE5MDM5HcAAAAB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "8b34c7dd-b15b-41cd-9800-b1838e73c886",
+              "name": "404 Not Found",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"udpated comment\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"name\": \"name there\",\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/contacts/customer/3"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:20:10 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnfV5ZhRB6H3UAAALF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Not found\",\n    \"message\": \"Unable to update customer_contact\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "5c3f00dc-6fca-4d0d-a1df-49a6689ec29c",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"udpated comment\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"name\": \"name there\",\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/contacts/customer/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "313"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:22:59 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnpL8PFHB43hoAAAAG"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"customer_contact\": {\n            \"comment\": \"udpated comment\",\n            \"customer\": {\n                \"id\": 1,\n                \"ref\": \"/api/v1/customers/1\"\n            },\n            \"email\": \"a@a.com\",\n            \"id\": 1,\n            \"is_primary\": true,\n            \"name\": \"name there\",\n            \"phone\": \"2345678902\",\n            \"ref\": \"/api/v1/contacts/customer/1\",\n            \"title\": \"title here\"\n        }\n    },\n    \"message\": \"customer_contact updated successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "create",
@@ -2980,7 +3678,176 @@
             "url": "{{host}}/api/v1/contacts/customer",
             "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "a5d91909-3ef6-49ce-aa01-fec10ca9e1b6",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"comment here\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"name\": \"name here\",\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:19:07 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnbrRX1tgqlpgAAABH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "4f410210-6a03-4df5-8fc2-e4c7e76928a9",
+              "name": "422 Unprocessable Entity",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"comment here\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "Unprocessable Entity",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "124"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:21:14 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnjFzl-hBqUnkAAADB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 422,\n    \"errors\": \"name: can't be blank, \",\n    \"message\": \"Unable to create customer_contact\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "71577871-5070-4bf6-8ad2-fe2ee1baad31",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customer_contact\": {\n        \"comment\": \"comment here\",\n        \"email\": \"a@a.com\",\n        \"is_primary\": true,\n        \"name\": \"name here\",\n        \"phone\": \"2345678902\",\n        \"title\": \"title here\",\n        \"customer_id\": 1\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/contacts/customer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "272"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 22:21:33 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcnkLVi9WhYHbUAAAAI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"customer_contact\": {\n            \"comment\": \"comment here\",\n            \"customer\": {\n                \"id\": 1,\n                \"ref\": \"/api/v1/customers/1\"\n            },\n            \"email\": \"a@a.com\",\n            \"id\": 1,\n            \"is_primary\": true,\n            \"name\": \"name here\",\n            \"phone\": \"2345678902\",\n            \"ref\": \"/api/v1/contacts/customer/1\",\n            \"title\": \"title here\"\n        }\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            }
+          ]
         }
       ],
       "_postman_id": "1477e9fd-d452-4316-8172-379edcccd639",
