@@ -2919,7 +2919,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/contacts/customer/1"
+            "url": "{{host}}/api/v1/contacts/customer/1",
+            "description": "Delete a specific customer contact.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
           "response": []
         },
