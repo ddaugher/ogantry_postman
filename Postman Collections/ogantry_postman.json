@@ -1002,7 +1002,8 @@
           "response": []
         }
       ],
-      "_postman_id": "4d6eee15-aec3-4940-ab5d-5621af298c7a"
+      "_postman_id": "4d6eee15-aec3-4940-ab5d-5621af298c7a",
+      "description": "## Description\nThe Query_Filters API enables you to manage query filters using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the customer endpoints.  The Query Filters API is a service that can be utilized by a third-party client to store query parameter strings which could be utilized for stored and/or saved filters for any backoffice service.\n\n## Model\n| Key        | Format | Description | Auto-generated? | Required?\n| --- | --- | --- | --- | ---\n|id|integer|The ID for the query filter (auto-generated)|yes|n/a\n|name|string|The name assigned to the query filter.  Naming convention will be determined by the third-party client|no|yes\n|is_shared|boolean|The boolean indicator identifying whether or not the saved query string will be shared with other users|default (FALSE)|yes\n|resource|string|the 'string' value of the resource associated with the query string. \n The 'resource' name scheme will be determined by the third-party client|no|yes\n|query_string|string|the 'string' value of the query_params.|no|yes\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a"
     },
     {
       "name": "alerts",
