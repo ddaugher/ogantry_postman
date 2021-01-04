@@ -545,7 +545,7 @@
               }
             },
             "url": "{{host}}/api/v1/customers/{{customer_id}}",
-            "description": "Update a specific customer.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|customer id|yes|\n|name|string|body|customer name|yes|\n|is_active|boolean|body|Active status for the customer (e.g. 'true' or 'false'|no (will default to 'false' if not supplied|\n|comment|string|body|comment|no|\n|extended_fields|string|body|jsonb structure|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/customers/{{customer_id}}\n```\n\n## Expected \"Body\" structure\n\n```\n{\n    \"customer\": {\n        \"name\": \"Block of Hours2\",\n        \"is:active\": true,\n        \"comment\": \"updated comment\",\n        \"extended_fields\": {\n            \"ext_dog\": \"dog123\",\n            \"ext_number\": 123\n        }\n\n    }\n}\n```"
+            "description": "Update a specific customer.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|customer id|yes|\n|name|string|body|customer name|yes|\n|is_active|boolean|body|Active status for the customer (e.g. 'true' or 'false'|no (will default to 'false' if not supplied|\n|comment|string|body|comment|no|\n|extended_fields|string|body|jsonb structure|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/customers/{{customer_id}}\n```"
           },
           "response": [
             {
@@ -901,7 +901,153 @@
             "url": "{{host}}/api/v1/query_filters",
             "description": "Lists all query filters.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Equal-to filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|is_shared|boolean|query|indicates whether query filter is shared with other users|\n|resource|string|query|resource the query string is associated, this is determined by the client|\n|query_string|string|query|url query string|\n|user_id|string|query|user id|\n|name|string|query|name for saved query string|\n\nThe 'equal-to' filters will only find exact matches for the filter requested.  Partial names and non-exact matches will not be returned.\n\nExample URL w/ query params:\n```\n{{host}}/api/v1/query_filters?name=sprite\n```\n\n## String-starts-with filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|name_prefix|string|query| name|\n|query_string_prefix|string|query|query string|\n|resource_prefix|string|query|resource|\n\nThe 'string-starts-with' filters will return all query_filters where the 'name_prefix' string value matches the first characters exactly for the query_filter name\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/query_filters?name_prefix=AEP\n```\n\n## String-contains filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|name_search|string|query| name|\n|query_string_search|string|query|query string|\n|resource_search|string|query|resource|\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/query_filters?name_search=tion\n```\n\n## Order-by sorting\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|is_shared|boolean|query|indicates whether query filter is shared with other users|\n|resource|string|query|resource the query string is associated, this is determined by the client|\n|query_string|string|query|url query string|\n|user_id|string|query|user id|\n|name|string|query|name for saved query string|\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/query_filters?order_by=asc:name\n```\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/query_filters?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/query_filters?offset=2\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "9e60b18f-13e2-4fae-85dc-3c2834c70791",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:59:15 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboI2y3ZkhHsFAAAADJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "339e2481-5d58-4385-a517-b80bf53d156b",
+              "name": "200 OK - No Results Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "55"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:06:28 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboiCUCBmj-qaMAAAAG"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"No results found\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "790120ef-9afd-497e-a91d-27f8a54fa529",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "222"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:07:01 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flboj_c-oFh04wAAAAQH"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "1"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"query_filters\": [\n            {\n                \"query_filter\": {\n                    \"id\": 1,\n                    \"is_shared\": true,\n                    \"name\": \"name\",\n                    \"query_string\": \"?name=abc&is_shared=true\",\n                    \"ref\": \"/api/v1/query_filters/1\",\n                    \"resource\": \"customers\",\n                    \"user_id\": 5\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "get",
@@ -921,7 +1067,196 @@
             "url": "{{host}}/api/v1/query_filters/{{id}}",
             "description": "Gets a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|query_filter id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "1ab50030-1782-41db-a10f-b7fb28ccfac7",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters/{{id}}"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:59:35 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboKC6DTgC0o6UAAASH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "277ba04c-e4ba-4a8f-992e-1857d6774d0c",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters/{{id}}"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "179"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:07:38 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbomJnBcBisLnYAAAAD"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"User Api Authorization Error, unable to proceed\",\n    \"message\": \"Sorry, your account does not permit api access to this location\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "11db7b57-0496-4f44-9c20-a7d835317823",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "237"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:08:12 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbooGRb4hsDZVAAAABF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"query_filter\": {\n            \"id\": 1,\n            \"is_shared\": true,\n            \"name\": \"name\",\n            \"query_string\": \"?name=abc&is_shared=true\",\n            \"ref\": \"/api/v1/query_filters/1\",\n            \"resource\": \"customers\",\n            \"user_id\": 5\n        }\n    },\n    \"message\": \"query_filter retrieved successfully\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "f3f3c515-55b6-4a32-85f5-cc49f4b14642",
+              "name": "404 Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters/2"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "109"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:08:46 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboqF3mVdDgb_gAAAEJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Not found\",\n    \"message\": \"Unable to retrieve query_filter\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "delete",
@@ -941,7 +1276,102 @@
             "url": "{{host}}/api/v1/query_filters/{{id}}",
             "description": "Delete a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|query filter id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "12a312c6-6c19-4df7-91eb-09743c8cf0d1",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters/{{id}}"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:57:16 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboB9U_w8C4wVwAAByB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "ea17d709-a34c-48a0-b3d1-c6005dc93c40",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/query_filters/52"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "72"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:58:34 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboGdPuEUAmpiwAAACJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"query_filter deleted successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "update",
@@ -970,7 +1400,232 @@
             "url": "{{host}}/api/v1/query_filters/{{id}}",
             "description": "Update a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|is_shared|boolean|body|indicates whether query filter is shared with other users|\n|resource|string|body|resource the query string is associated, this is determined by the client|\n|query_string|string|body|url query string|\n|name|string|body|name for saved query string|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "e30ba572-9c3e-4d95-a6bb-6b97470312a2",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/query_filters/52"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "237"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:39:31 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbnD7WrWlEi0SUAAAOL"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"query_filter\": {\n            \"id\": 52,\n            \"is_shared\": true,\n            \"name\": \"name\",\n            \"query_string\": \"?name=abc&is_shared=true\",\n            \"ref\": \"/api/v1/query_filters/52\",\n            \"resource\": \"customers\",\n            \"user_id\": 5\n        }\n    },\n    \"message\": \"query_filter updated successfully\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "1e11940d-1e84-4aa0-a6ed-10ad39cd318d",
+              "name": "422 Unprocessable Entity",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/query_filters/53"
+              },
+              "status": "Unprocessable Entity",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "107"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:39:55 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbnFUQzvP-pjmsAAAgK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 422,\n    \"errors\": \"Not found\",\n    \"message\": \"Unable to update query_filter\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "075af195-9b8f-4903-8795-8f46593a9938",
+              "name": "401 Unauthorized - Access Authorization",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/query_filters/{{id}}"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "77"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:40:26 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbnHIMKVkO6aiYAAAXI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"message\": \"Sorry, your account does not permit api access to this location\"\n}"
+            },
+            {
+              "id": "2249a37a-4b9f-4a50-a119-e01bc145fe6c",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/query_filters/{{id}}"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 02:53:44 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flbn1jaR1uARgoQAAATE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "create",
@@ -997,9 +1652,122 @@
               }
             },
             "url": "{{host}}/api/v1/query_filters",
-            "description": "Create a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|is_shared|boolean|body|indicates whether query filter is shared with other users|\n|resource|string|body|resource the query string is associated, this is determined by the client|\n|query_string|string|body|url query string|\n|name|string|body|name for saved query string|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```\n\n## Expected \"Body\" structure\n\n```\n{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}\n```"
+            "description": "Create a specific query_filter.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|is_shared|boolean|body|indicates whether query filter is shared with other users|\n|resource|string|body|resource the query string is associated, this is determined by the client|\n|query_string|string|body|url query string|\n|name|string|body|name for saved query string|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/query_filters/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "2faf6fd4-1655-44d3-8e46-ab6a5c540300",
+              "name": "401 Unauthorized - Not Authenticated",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/query_filters"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:00:18 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboMh92P1il3rIAAAAK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "0fe5b37f-1e05-4779-8ea3-18216fdd8e60",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query_filter\": {\n        \"is_shared\": true,\n        \"resource\": \"customers\",\n        \"query_string\": \"?name=abc&is_shared=true\",        \n        \"name\": \"name\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/query_filters"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "204"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:00:53 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlboOhf_tECxMBMAAATH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"query_filter\": {\n            \"id\": 53,\n            \"is_shared\": true,\n            \"name\": \"name\",\n            \"query_string\": \"?name=abc&is_shared=true\",\n            \"ref\": \"/api/v1/query_filters/53\",\n            \"resource\": \"customers\",\n            \"user_id\": 5\n        }\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            }
+          ]
         }
       ],
       "_postman_id": "4d6eee15-aec3-4940-ab5d-5621af298c7a",
