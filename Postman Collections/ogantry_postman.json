@@ -2978,7 +2978,7 @@
               }
             },
             "url": "{{host}}/api/v1/contacts/customer",
-            "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|id|yes|\n|key|string|body|key|yes\n|message|string|body|message|yes\n|name|string|body|name|yes\n|response|string|body|response|no\n|type|string|body|type|yes\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/alerts/{{id}}\n```"
+            "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
           "response": []
         }
