@@ -1808,9 +1808,203 @@
                 }
               ]
             },
-            "description": "## Equal-to filters\n\nThe field's value must be equal to the filter value.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name=sprite\n```\nThe following filters are supported:\n\n* `key`\n* `message`\n* `name`\n* `response`\n* `type`\n\n## String-starts-with filters\n\nThe string-type field's value must start with the filter's value.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?resource_prefix=posit\n```\n\nThe following filter names are supported:\n\n* `key_prefix` (actual field is `key)`\n* `message_prefix` (actual field is `message)`\n* `name_prefix` (actual field is `name)`\n* `response` (actual field is `response)`\n* `type_prefix` (actual field is `type)`\n\n## String-contains filters\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?query_string_search=tion\n```\n\nThe following filter names are supported:\n\n* `key_search` (actual field is `key)`\n* `message_search` (actual field is `message)`\n* `name_search` (actual field is `name)`\n* `response_search` (actual field is `response)`\n* `type_search` (actual field is `type)`\n\n## Order-by sorting\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?order_by=asc:name\n```\nThe following filters are supported:\n\n* `key`\n* `message`\n* `name`\n* `response`\n* `type`\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?offset=2\n```"
+            "description": "Lists all customers.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Equal-to filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key|string|query|key|\n|message|string|query|message|\n|name|string|query|name|\n|response|string|query|response|\n|type|string|query|type|\n\nThe 'equal-to' filters will only find exact matches for the filter requested.  Partial names and non-exact matches will not be returned.\n\nExample URL w/ query params:\n```\n{{host}}/api/v1/alerts?name=sprite\n```\n\n## String-starts-with filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key_prefix|string|query|key|\n|message_prefix|string|query|message|\n|name_prefix|string|query|name|\n|response_prefix|string|query|response|\n|type_prefix|string|query|type|\n\nThe 'string-starts-with' filters will return all customers where the 'name_prefix' string value matches the first characters exactly for the customer name\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_prefix=AEP\n```\n\n## String-contains filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key_search|string|query|key|\n|message_search|string|query|message|\n|name_search|string|query|name|\n|response_search|string|query|response|\n|type_search|string|query|type|\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_search=tion\n```\n\n## Order-by sorting\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key|string|query|key|\n|message|string|query|message|\n|name|string|query|name|\n|response|string|query|response|\n|type|string|query|type|\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/customers?order_by=asc:name\n```\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/customers?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/customers?offset=2\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "754f7b89-7b47-4dd0-bf58-b22485182b65",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/alerts?",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "alerts"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:17:05 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpHL2Ps8rTD8kAAALI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "b0d01614-4a86-48c5-83e6-5a72545bbf8f",
+              "name": "list - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/alerts?",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "alerts"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "175"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:24:48 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpiGQmgJer2koAAApH"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "1"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"alerts\": [\n            {\n                \"alert\": {\n                    \"id\": 1,\n                    \"key\": \"key\",\n                    \"message\": \"message\",\n                    \"name\": \"name\",\n                    \"ref\": \"/api/v1/alerts/1\",\n                    \"response\": \"response\",\n                    \"type\": \"type\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "ab0dd57d-3e74-471d-bae3-cb911093f245",
+              "name": "list - 200 OK - no results found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/alerts?",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "alerts"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "55"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:25:48 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbplmRHsr3pQcoAAAzB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"No results found\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "count",
@@ -1844,9 +2038,140 @@
                 }
               ]
             },
-            "description": "Count\nWill return the total number of records based on the supplied query params. The total record count will be returned in the following response header x-total-count.\n\n## Equal-to filters\n\nThe field's value must be equal to the filter value.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name=sprite\n```\nThe following filters are supported:\n\n* `key`\n* `message`\n* `name`\n* `response`\n* `type`\n\n## String-starts-with filters\n\nThe string-type field's value must start with the filter's value.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?resource_prefix=posit\n```\n\nThe following filter names are supported:\n\n* `key_prefix` (actual field is `key)`\n* `message_prefix` (actual field is `message)`\n* `name_prefix` (actual field is `name)`\n* `response` (actual field is `response)`\n* `type_prefix` (actual field is `type)`\n\n## String-contains filters\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?query_string_search=tion\n```\n\nThe following filter names are supported:\n\n* `key_search` (actual field is `key)`\n* `message_search` (actual field is `message)`\n* `name_search` (actual field is `name)`\n* `response_search` (actual field is `response)`\n* `type_search` (actual field is `type)`\n\n## Order-by sorting\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?order_by=asc:name\n```\nThe following filters are supported:\n\n* `key`\n* `message`\n* `name`\n* `response`\n* `type`\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?offset=2\n```"
+            "description": "Lists all customers.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Equal-to filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key|string|query|key|\n|message|string|query|message|\n|name|string|query|name|\n|response|string|query|response|\n|type|string|query|type|\n\nThe 'equal-to' filters will only find exact matches for the filter requested.  Partial names and non-exact matches will not be returned.\n\nExample URL w/ query params:\n```\n{{host}}/api/v1/alerts?name=sprite\n```\n\n## String-starts-with filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key_prefix|string|query|key|\n|message_prefix|string|query|message|\n|name_prefix|string|query|name|\n|response_prefix|string|query|response|\n|type_prefix|string|query|type|\n\nThe 'string-starts-with' filters will return all customers where the 'name_prefix' string value matches the first characters exactly for the customer name\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_prefix=AEP\n```\n\n## String-contains filters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key_search|string|query|key|\n|message_search|string|query|message|\n|name_search|string|query|name|\n|response_search|string|query|response|\n|type_search|string|query|type|\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/alerts?name_search=tion\n```\n\n## Order-by sorting\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|key|string|query|key|\n|message|string|query|message|\n|name|string|query|name|\n|response|string|query|response|\n|type|string|query|type|\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/customers?order_by=asc:name\n```\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/customers?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/customers?offset=2\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "598e6594-8623-4cc1-81e9-628b8775fb11",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/alerts?",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "alerts"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:16:16 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpETTWkTY0jUIAAABK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "b04c252b-8b86-4e53-a936-31643617206a",
+              "name": "count - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/alerts?",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "alerts"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "175"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:26:14 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpnHSGZJ2daD0AAAXF"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "1"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"alerts\": [\n            {\n                \"alert\": {\n                    \"id\": 2,\n                    \"key\": \"key\",\n                    \"message\": \"message\",\n                    \"name\": \"name\",\n                    \"ref\": \"/api/v1/alerts/2\",\n                    \"response\": \"response\",\n                    \"type\": \"type\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "get",
@@ -1863,9 +2188,152 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/alerts/3"
+            "url": "{{host}}/api/v1/alerts/3",
+            "description": "Gets a specific alert.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/alerts/1\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "982f6b21-c1b0-404f-b14c-0d81e63cf025",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/alerts/3"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:16:43 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpF3xE2J3pNS8AAARH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "ecb19cf7-84e7-41c1-a608-377a597e1203",
+              "name": "get - 404 Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/alerts/3"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "102"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:26:28 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flbpn5scvIWb2J8AAAKL"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Not found\",\n    \"message\": \"Unable to retrieve alert\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "e405a6d6-374a-4191-9207-1f640aef8730",
+              "name": "get - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/alerts/2"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "190"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:26:48 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbppG325fXOLnwAAAbE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"alert\": {\n            \"id\": 2,\n            \"key\": \"key\",\n            \"message\": \"message\",\n            \"name\": \"name\",\n            \"ref\": \"/api/v1/alerts/2\",\n            \"response\": \"response\",\n            \"type\": \"type\"\n        }\n    },\n    \"message\": \"alert retrieved successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "delete",
@@ -1882,9 +2350,152 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/alerts/1"
+            "url": "{{host}}/api/v1/alerts/1",
+            "description": "Delete a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/alerts/{{id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "35a73c1c-a004-4ec0-9147-56bb818e2896",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/alerts/1"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:17:20 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpIESJ788hyEwAAAAE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "9763772b-c3cf-4183-b680-a97e2f5238ec",
+              "name": "delete - 404 Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/alerts/2"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "100"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:25:12 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpjfBido310YIAAAVK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Not found\",\n    \"message\": \"Unable to delete alert\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "ffb169dc-886a-42de-8a29-361886e401a4",
+              "name": "delete - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/alerts/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "65"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:25:32 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpkpTRoiA2dMUAAAaE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"message\": \"alert deleted successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "update",
@@ -1912,7 +2523,64 @@
             },
             "url": "{{host}}/api/v1/alerts/3"
           },
-          "response": []
+          "response": [
+            {
+              "id": "78104d38-7cc6-4331-8a85-744e159122be",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"alert\": {\n        \"key\": \"key\",\n        \"type\": \"type\",\n        \"name\": \"name\",\n        \"message\": \"message\",\n        \"response\": \"response\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/alerts/3"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:17:35 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpI66YIjY_LggAAASH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "create",
@@ -1940,10 +2608,236 @@
             },
             "url": "{{host}}/api/v1/alerts"
           },
-          "response": []
+          "response": [
+            {
+              "id": "34d3dc9d-0368-4970-bda1-6c4d82fadebe",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"alert\": {\n        \"key\": \"key\",\n        \"type\": \"type\",\n        \"name\": \"name\",\n        \"message\": \"message\",\n        \"response\": \"response\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/alerts"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:17:48 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpJte4Or42QN4AAAMI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "cacc2256-5067-41f6-82bd-2f2983e2ac75",
+              "name": "create - 401 Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"alert\": {\n        \"key\": \"key\",\n        \"type\": \"type\",\n        \"name\": \"name\",\n        \"message\": \"message\",\n        \"response\": \"response\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/alerts"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "179"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:18:20 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpLkanir26-KsAAACD"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"User Api Authorization Error, unable to proceed\",\n    \"message\": \"Sorry, your account does not permit api access to this location\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "e74a40cf-dced-437d-bfeb-a38dfe43c4a3",
+              "name": "create - 200 OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"alert\": {\n        \"key\": \"key\",\n        \"type\": \"type\",\n        \"name\": \"name\",\n        \"message\": \"message\",\n        \"response\": \"response\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/alerts"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "162"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:22:19 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpZamTYFo4vrgAAAnH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"alert\": {\n            \"id\": 1,\n            \"key\": \"key\",\n            \"message\": \"message\",\n            \"name\": \"name\",\n            \"ref\": \"/api/v1/alerts/1\",\n            \"response\": \"response\",\n            \"type\": \"type\"\n        }\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "749f8bf7-d06e-47e6-9d92-63690f3ec42f",
+              "name": "create - 422 invalid data",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"alert\": {\n        \"key\": \"key\",\n        \"type\": \"type\",\n        \"message\": \"message\",\n        \"response\": \"response\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/alerts"
+              },
+              "status": "Unprocessable Entity",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "113"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 04 Jan 2021 03:22:51 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlbpbR-sG9Ks7nYAAAoH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 422,\n    \"errors\": \"name: can't be blank, \",\n    \"message\": \"Unable to create alert\",\n    \"success\": false\n}"
+            }
+          ]
         }
       ],
-      "_postman_id": "04692be9-c056-4bd1-843f-b6b2a55da6f3"
+      "_postman_id": "04692be9-c056-4bd1-843f-b6b2a55da6f3",
+      "description": "## Description\nThe Alerts API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the customer endpoints.\n\n## Model\n| Key        | Format | Description | Auto-generated? | Required?\n| --- | --- | --- | --- | ---\n|id|integer|The ID for the alert (auto-generated)|yes|n/a\n|name|string|The name of the alert|no|yes\n|key|string|client defined key|no|yes\n|type|string|client defined type|no|yes\n|message|string|client defined message|no|yes\n|response|string|dlient defined response|no|no\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a"
     },
     {
       "name": "customer_contacts",
