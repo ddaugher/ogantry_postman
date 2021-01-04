@@ -3192,7 +3192,7 @@
               }
             ],
             "url": "{{host}}/api/v1/contacts/customer/3",
-            "description": "Gets a specific customer contact.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/1\n```"
+            "description": "Get a specific customer contact."
           },
           "response": [
             {
@@ -3478,7 +3478,7 @@
               }
             },
             "url": "{{host}}/api/v1/contacts/customer/3",
-            "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
+            "description": "Update a specific customer contact.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
           "response": [
             {
@@ -3676,7 +3676,7 @@
               }
             },
             "url": "{{host}}/api/v1/contacts/customer",
-            "description": "Update a specific alert.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
+            "description": "Update a specific customer contact.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|comment|string|query|comment|\n|customer_id|string|query|customer_id associated with contact|\n|email|string|query|email address|\n|is_primary|string|query|boolean indicating whether or not the contact is identified as primary|\n|name|string|query|contact name|\n|phone|string|query|contact phone|\n|title|string|query|contact title|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
           },
           "response": [
             {
