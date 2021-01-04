@@ -631,7 +631,7 @@
               }
             },
             "url": "{{host}}/api/v1/customers",
-            "description": "Create a specific customer.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|customer id|yes|\n|name|string|body|customer name|yes|\n|is_active|boolean|body|Active status for the customer (e.g. 'true' or 'false'|no (will default to 'false' if not supplied|\n|comment|string|body|comment|no|\n|extended_fields|string|body|jsonb structure|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/customers/{{customer_id}}\n```\n\n## Expected \"Body\" structure\n\n```\n{\n    \"customer\": {\n        \"name\": \"Block of Hours2\",\n        \"is:active\": true,\n        \"comment\": \"updated comment\",\n        \"extended_fields\": {\n            \"ext_dog\": \"dog123\",\n            \"ext_number\": 123\n        }\n\n    }\n}\n```"
+            "description": "Create a specific customer.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|customer id|yes|\n|name|string|body|customer name|yes|\n|is_active|boolean|body|Active status for the customer (e.g. 'true' or 'false'|no (will default to 'false' if not supplied|\n|comment|string|body|comment|no|\n|extended_fields|string|body|jsonb structure|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/customers/{{customer_id}}\n```"
           },
           "response": [
             {
@@ -1777,7 +1777,7 @@
       "name": "alerts",
       "item": [
         {
-          "name": "search",
+          "name": "list",
           "_postman_id": "73284642-d102-4b4c-b50c-1351a370b8af",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
