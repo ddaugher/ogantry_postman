@@ -4997,6 +4997,69 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {\n        \"projects\": [\n            {\n                \"project\": {\n                    \"amount\": \"100.00\",\n                    \"billing_type\": \"Time and Materials\",\n                    \"contacts\": [],\n                    \"customer\": {\n                        \"name\": \"Block of Hours2\",\n                        \"ref\": \"/api/v1/customers/1\"\n                    },\n                    \"deleted_date\": null,\n                    \"description\": null,\n                    \"effective_end_date\": null,\n                    \"effective_start_date\": \"2020-11-22T02:15:11.123110Z\",\n                    \"end_date\": \"2020-06-01\",\n                    \"fixed_bid_price\": null,\n                    \"id\": 1,\n                    \"name\": \"Falling Sabre R&D\",\n                    \"pid\": 1,\n                    \"ref\": \"/api/v1/projects/1\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-05-01\",\n                    \"status\": \"Draft\",\n                    \"validated\": false\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "d6ba3e9e-f564-4e4c-9619-acfe0764bb1b",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/projects?customer_ids=1",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "projects"
+                  ],
+                  "query": [
+                    {
+                      "key": "customer_ids",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:06:23 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz1Z_DSaCPpEsAAASD"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             }
           ]
         },
@@ -5069,6 +5132,53 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {\n        \"projects\": [\n            {\n                \"project\": {\n                    \"amount\": \"100.00\",\n                    \"billing_type\": \"Time and Materials\",\n                    \"contacts\": [],\n                    \"customer\": {\n                        \"name\": \"Block of Hours2\",\n                        \"ref\": \"/api/v1/customers/1\"\n                    },\n                    \"deleted_date\": null,\n                    \"description\": null,\n                    \"effective_end_date\": null,\n                    \"effective_start_date\": \"2020-11-22T02:15:11.123110Z\",\n                    \"end_date\": \"2020-06-01\",\n                    \"fixed_bid_price\": null,\n                    \"id\": 1,\n                    \"name\": \"Falling Sabre R&D\",\n                    \"pid\": 1,\n                    \"ref\": \"/api/v1/projects/1\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-05-01\",\n                    \"status\": \"Draft\",\n                    \"validated\": false\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "b6384c78-28e2-420b-bf61-8693e764989d",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/ids"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:06:11 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz0tEx6yCVgRoAAABI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             }
           ]
         },
@@ -5157,6 +5267,53 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {\n        \"projects\": [\n            {\n                \"project\": {\n                    \"amount\": null,\n                    \"billing_type\": \"Time and Materials\",\n                    \"contacts\": [],\n                    \"customer\": {\n                        \"name\": \"updated customer\",\n                        \"ref\": \"/api/v1/customers/1\"\n                    },\n                    \"deleted_date\": null,\n                    \"description\": null,\n                    \"effective_end_date\": null,\n                    \"effective_start_date\": \"2020-11-22T03:17:46.341055Z\",\n                    \"end_date\": \"2020-06-01\",\n                    \"fixed_bid_price\": null,\n                    \"id\": 3,\n                    \"name\": \"Falling Sabre R&D\",\n                    \"pid\": 3,\n                    \"projection\": {\n                        \"cost\": \"17600.00\",\n                        \"gross_margin\": \"0.00\",\n                        \"margin_change_log_message\": \"valid message goes here\",\n                        \"percent_gross_margin\": \"0.00\",\n                        \"project_id\": 3,\n                        \"revenue\": \"17600.00\",\n                        \"total_contract_cost\": \"0.00\",\n                        \"total_direct_cost\": \"17600.00\",\n                        \"total_expenses\": \"0.00\",\n                        \"total_open_positions_cost\": \"0.00\",\n                        \"valid_monthly_projections\": [\n                            {\n                                \"projection\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"16800.00\",\n                                    \"direct_cost\": \"16800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 5,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"revenue\": \"16800.00\",\n                                    \"validated_monthly_positions\": [\n                                        {\n                                            \"validated_monthly_position\": {\n                                                \"contract_cost\": \"0.00\",\n                                                \"cost\": \"16800.00\",\n                                                \"direct_cost\": \"16800.00\",\n                                                \"expenses\": \"0.00\",\n                                                \"month\": 5,\n                                                \"open_positions_cost\": \"0.00\",\n                                                \"position\": {\n                                                    \"name\": \"position1\",\n                                                    \"ref\": \"/api/v1/positions/1\"\n                                                },\n                                                \"revenue\": \"16800.00\",\n                                                \"year\": 2020\n                                            }\n                                        }\n                                    ],\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"projection\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"800.00\",\n                                    \"direct_cost\": \"800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 6,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"revenue\": \"800.00\",\n                                    \"validated_monthly_positions\": [\n                                        {\n                                            \"validated_monthly_position\": {\n                                                \"contract_cost\": \"0.00\",\n                                                \"cost\": \"800.00\",\n                                                \"direct_cost\": \"800.00\",\n                                                \"expenses\": \"0.00\",\n                                                \"month\": 6,\n                                                \"open_positions_cost\": \"0.00\",\n                                                \"position\": {\n                                                    \"name\": \"position1\",\n                                                    \"ref\": \"/api/v1/positions/2\"\n                                                },\n                                                \"revenue\": \"800.00\",\n                                                \"year\": 2020\n                                            }\n                                        }\n                                    ],\n                                    \"year\": 2020\n                                }\n                            }\n                        ]\n                    },\n                    \"ref\": \"/api/v1/projects/3\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-05-01\",\n                    \"status\": \"Draft\",\n                    \"validated\": true\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "6dbfe380-1bb2-4a3b-ad6c-8a87969b3dab",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/plus_projection"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:05:59 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flczz86TM5DPgWkAAACB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             }
           ]
         },
@@ -5229,6 +5386,53 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "bc664d07-d9d6-4ed2-b1fd-da5d0f224fff",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/count"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:05:45 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczzK8G77BzB0wAAAAH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             }
           ]
         },
@@ -5250,7 +5454,55 @@
             "url": "{{host}}/api/v1/projects/24",
             "description": "Gets a specific project.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|project id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/1\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "7455aa83-0d75-45ad-974d-cc195643bdca",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/24"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:05:34 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flczyiiu8nCBkLkAAAME"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "status values",
@@ -5270,7 +5522,55 @@
             "url": "{{host}}/api/v1/projects/status_values",
             "description": "List of valid project status values.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/status_values\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "e6c77933-8552-4044-9daa-12dd89669b94",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/status_values"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:05:21 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczxxcU8tjgb_gAAAEF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "validation status",
@@ -5290,7 +5590,55 @@
             "url": "{{host}}/api/v1/projects/24/validation_status",
             "description": "Returns the current validation status for a specific project.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}/validation_status\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "7ee347c5-1bd6-4ed0-9c8b-59a411790114",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/24/validation_status"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:05:05 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flczw2PzjjgXgCkAAADF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}w"
+            }
+          ]
         },
         {
           "name": "latest_validation",
@@ -5310,7 +5658,55 @@
             "url": "{{host}}/api/v1/projects/24/latest_validation",
             "description": "Most current project validation for specific project.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}/latest_validation\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "edbeeb4c-5bb9-46f9-a0b8-dc58fabe0aac",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/24/latest_validation"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:04:56 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczwSBQMigDZVAAAACC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "projection",
@@ -5377,6 +5773,53 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {\n        \"projection\": {\n            \"cost\": \"314600.00\",\n            \"gross_margin\": \"0.00\",\n            \"margin_change_log_message\": \"valid message goes here\",\n            \"percent_gross_margin\": \"0.00\",\n            \"project_id\": 2,\n            \"revenue\": \"314600.00\",\n            \"total_contract_cost\": \"0.00\",\n            \"total_direct_cost\": \"314600.00\",\n            \"total_expenses\": \"0.00\",\n            \"total_open_positions_cost\": \"0.00\",\n            \"valid_monthly_projections\": [\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"18400.00\",\n                        \"direct_cost\": \"18400.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 1,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"18400.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"18400.00\",\n                                    \"direct_cost\": \"18400.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 1,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/11\"\n                                    },\n                                    \"revenue\": \"18400.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"16000.00\",\n                        \"direct_cost\": \"16000.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 2,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"16000.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"16000.00\",\n                                    \"direct_cost\": \"16000.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 2,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/12\"\n                                    },\n                                    \"revenue\": \"16000.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"17600.00\",\n                        \"direct_cost\": \"17600.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 3,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"17600.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"17600.00\",\n                                    \"direct_cost\": \"17600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 3,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/13\"\n                                    },\n                                    \"revenue\": \"17600.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"17600.00\",\n                        \"direct_cost\": \"17600.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 4,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"17600.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"17600.00\",\n                                    \"direct_cost\": \"17600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 4,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/14\"\n                                    },\n                                    \"revenue\": \"17600.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"29400.00\",\n                        \"direct_cost\": \"29400.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 5,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"29400.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"12600.00\",\n                                    \"direct_cost\": \"12600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 5,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/3\"\n                                    },\n                                    \"revenue\": \"12600.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"16800.00\",\n                                    \"direct_cost\": \"16800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 5,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/15\"\n                                    },\n                                    \"revenue\": \"16800.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"30800.00\",\n                        \"direct_cost\": \"30800.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 6,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"30800.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"13200.00\",\n                                    \"direct_cost\": \"13200.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 6,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/4\"\n                                    },\n                                    \"revenue\": \"13200.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"17600.00\",\n                                    \"direct_cost\": \"17600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 6,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/16\"\n                                    },\n                                    \"revenue\": \"17600.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"32200.00\",\n                        \"direct_cost\": \"32200.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 7,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"32200.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"13800.00\",\n                                    \"direct_cost\": \"13800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 7,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/5\"\n                                    },\n                                    \"revenue\": \"13800.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"18400.00\",\n                                    \"direct_cost\": \"18400.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 7,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/17\"\n                                    },\n                                    \"revenue\": \"18400.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"29400.00\",\n                        \"direct_cost\": \"29400.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 8,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"29400.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"12600.00\",\n                                    \"direct_cost\": \"12600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 8,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/6\"\n                                    },\n                                    \"revenue\": \"12600.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"16800.00\",\n                                    \"direct_cost\": \"16800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 8,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/18\"\n                                    },\n                                    \"revenue\": \"16800.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"30800.00\",\n                        \"direct_cost\": \"30800.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 9,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"30800.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"13200.00\",\n                                    \"direct_cost\": \"13200.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 9,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/7\"\n                                    },\n                                    \"revenue\": \"13200.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"17600.00\",\n                                    \"direct_cost\": \"17600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 9,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/19\"\n                                    },\n                                    \"revenue\": \"17600.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"30800.00\",\n                        \"direct_cost\": \"30800.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 10,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"30800.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"13200.00\",\n                                    \"direct_cost\": \"13200.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 10,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/8\"\n                                    },\n                                    \"revenue\": \"13200.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"17600.00\",\n                                    \"direct_cost\": \"17600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 10,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/20\"\n                                    },\n                                    \"revenue\": \"17600.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"29400.00\",\n                        \"direct_cost\": \"29400.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 11,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"29400.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"12600.00\",\n                                    \"direct_cost\": \"12600.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 11,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/9\"\n                                    },\n                                    \"revenue\": \"12600.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"16800.00\",\n                                    \"direct_cost\": \"16800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 11,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/21\"\n                                    },\n                                    \"revenue\": \"16800.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                },\n                {\n                    \"projection\": {\n                        \"contract_cost\": \"0.00\",\n                        \"cost\": \"32200.00\",\n                        \"direct_cost\": \"32200.00\",\n                        \"expenses\": \"0.00\",\n                        \"month\": 12,\n                        \"open_positions_cost\": \"0.00\",\n                        \"revenue\": \"32200.00\",\n                        \"validated_monthly_positions\": [\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"13800.00\",\n                                    \"direct_cost\": \"13800.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 12,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position2\",\n                                        \"ref\": \"/api/v1/positions/10\"\n                                    },\n                                    \"revenue\": \"13800.00\",\n                                    \"year\": 2020\n                                }\n                            },\n                            {\n                                \"validated_monthly_position\": {\n                                    \"contract_cost\": \"0.00\",\n                                    \"cost\": \"18400.00\",\n                                    \"direct_cost\": \"18400.00\",\n                                    \"expenses\": \"0.00\",\n                                    \"month\": 12,\n                                    \"open_positions_cost\": \"0.00\",\n                                    \"position\": {\n                                        \"name\": \"position3\",\n                                        \"ref\": \"/api/v1/positions/22\"\n                                    },\n                                    \"revenue\": \"18400.00\",\n                                    \"year\": 2020\n                                }\n                            }\n                        ],\n                        \"year\": 2020\n                    }\n                }\n            ]\n        }\n    },\n    \"message\": \"Projection generated successfully\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "c68c1de0-9168-4694-9e3d-31db252ef3cf",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/1/projection"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:04:43 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczvkeGBVC8M_sAAACF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             }
           ]
         },
@@ -5407,7 +5850,64 @@
             "url": "{{host}}/api/v1/projects/24",
             "description": "Update a specific project.\n\n\n# Billing types\n## The following 'string' values should be used when updating the BillingType.\n| Type | Value\n|---|---|\n|BillingType.FIXED|Fixed\n|BillingType.WEEKLY|Weekly\n|BillingType.MONTHLY|Monthly\n|BillingType.TIMEMATERIALS|Time and Materials\n\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|n/a (auto-generated by the DBMS)|\n|name|string|body|name|yes|\n|description|string|body|description|no|\n|amount|decimal|body|amount associated with BillingType|no|\n|billing_type|string|body|required to be one of the previously defined 'billing types'|yes|\n|customer_id|integer|body|customer id associated with the project|yes|\n|region_id|integer|body|region id associated with the project|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "ef34c57d-a9f9-47bd-9c0a-2555b364d1d5",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"project\": {\n        \"description\": \"another description\",\n        \"fixed_bid_price\": null,\n        \"name\": \"updated name\",\n        \"region\": \"test\",\n        \"status\": \"Draft\",\n        \"validated\": false,\n        \"amount\": 100.00,\n        \"billing_type\": \"Time and Materials\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/24"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:04:32 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flczu4Zd1VgYsOEAAABF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "create",
@@ -5436,7 +5936,64 @@
             "url": "{{host}}/api/v1/projects",
             "description": "Create a specific project.\n\n\n# Billing types\n## The following 'string' values should be used when updating the BillingType.\n| Type | Value\n|---|---|\n|BillingType.FIXED|Fixed\n|BillingType.WEEKLY|Weekly\n|BillingType.MONTHLY|Monthly\n|BillingType.TIMEMATERIALS|Time and Materials\n\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|n/a (auto-generated by the DBMS)|\n|name|string|body|name|yes|\n|description|string|body|description|no|\n|amount|decimal|body|amount associated with BillingType|no|\n|billing_type|string|body|required to be one of the previously defined 'billing types'|yes|\n|customer_id|integer|body|customer id associated with the project|yes|\n|region_id|integer|body|region id associated with the project|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "65f25287-e07b-46f6-94e9-1a98f85a0b4a",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"project\": {\n        \"description\": null,\n        \"name\": \"Falling Sabre R&D\",\n        \"customer_id\": 1,\n        \"region_id\": 1,\n        \"amount\": 100.00,\n        \"billing_type\": \"Time and Materials\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/projects"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:04:18 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczuHSeLSCsLnYAAABC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "delete",
@@ -5456,7 +6013,55 @@
             "url": "{{host}}/api/v1/projects/24",
             "description": "Delete a specific project.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "3e5088fc-a8bb-4f15-acb1-b71e33bbf95b",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/projects/24"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:04:00 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlcztCrGARhxu0AAAABB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            }
+          ]
         },
         {
           "name": "validate project",
@@ -5575,6 +6180,63 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {},\n    \"error_code\": 400,\n    \"errors\": \"Unable to validate project, no associated positions\",\n    \"message\": \"\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "6bcd23dd-b5fc-4ec6-80a2-ddba3b16f04e",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/2/validate"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:03:47 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczsQ07fMDP11YAAAAI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             }
           ]
         },
@@ -5695,6 +6357,177 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {},\n    \"error_code\": 400,\n    \"errors\": \"Unable to validate project, no associated positions\",\n    \"message\": \"\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "639c3120-6482-430b-abbf-981ee40ef09a",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/24/validate_async"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:03:36 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczrqDjF4htlCsAAAAF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "b993e7ce-369d-429c-8530-bd99c40d28df",
+              "name": "404 Not Found",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/24/validate_async"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "95"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:08:05 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz7T6h_ZjHYZAAAAJK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Unable to validate project\",\n    \"message\": \"\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "13518aa2-c78c-41e6-bef1-a4b1f5f082e4",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/1/validate_async"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "554"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:08:20 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz8Mi2ZXC6-KsAAATD"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"project\": {\n            \"amount\": \"100.00\",\n            \"billing_type\": \"Time and Materials\",\n            \"contacts\": [],\n            \"customer\": {\n                \"name\": \"Block of Hours2\",\n                \"ref\": \"/api/v1/customers/1\"\n            },\n            \"deleted_date\": null,\n            \"description\": null,\n            \"effective_end_date\": null,\n            \"effective_start_date\": \"2020-12-24T03:59:18.145679Z\",\n            \"end_date\": \"2020-06-01\",\n            \"extended_fields\": {},\n            \"fixed_bid_price\": null,\n            \"id\": 1,\n            \"name\": \"Falling Sabre R&D\",\n            \"pid\": 1,\n            \"ref\": \"/api/v1/projects/1\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-05-01\",\n            \"status\": \"Draft\",\n            \"validated\": \"IN PROGRESS\"\n        }\n    },\n    \"message\": \"Project validated successfully\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -5758,6 +6591,177 @@
               "cookie": [],
               "responseTime": null,
               "body": ""
+            },
+            {
+              "id": "3de62df4-34bf-4883-b816-68838a44faef",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/1/invalidate"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 01:57:15 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FlczVfUufRiWR_EAAALE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "238357b1-e783-4f8f-842c-f3a99af240e9",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/1/invalidate"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "547"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:06:52 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz3CmmNfCaQUEAAADB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"project\": {\n            \"amount\": \"100.00\",\n            \"billing_type\": \"Time and Materials\",\n            \"contacts\": [],\n            \"customer\": {\n                \"name\": \"Block of Hours2\",\n                \"ref\": \"/api/v1/customers/1\"\n            },\n            \"deleted_date\": null,\n            \"description\": null,\n            \"effective_end_date\": null,\n            \"effective_start_date\": \"2020-12-24T03:59:18.145679Z\",\n            \"end_date\": \"2020-06-01\",\n            \"extended_fields\": {},\n            \"fixed_bid_price\": null,\n            \"id\": 1,\n            \"name\": \"Falling Sabre R&D\",\n            \"pid\": 1,\n            \"ref\": \"/api/v1/projects/1\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-05-01\",\n            \"status\": \"Draft\",\n            \"validated\": \"NO\"\n        }\n    },\n    \"message\": \"Project invalidated successfully\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "032b9f7b-b4ff-4725-8368-dc698161e40f",
+              "name": "404 Not Found",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/5/invalidate"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "97"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:07:17 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz4jEAM-A3F50AAAFF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Unable to invalidate project\",\n    \"message\": \"\",\n    \"success\": false\n}"
             }
           ]
         }
