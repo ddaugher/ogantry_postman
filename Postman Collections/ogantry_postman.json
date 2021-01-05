@@ -5267,7 +5267,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/projects/status_values"
+            "url": "{{host}}/api/v1/projects/status_values",
+            "description": "List of valid project status values."
           },
           "response": []
         },
@@ -5286,7 +5287,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/projects/24/validation_status"
+            "url": "{{host}}/api/v1/projects/24/validation_status",
+            "description": "Returns the current validation status for a specific project."
           },
           "response": []
         },
@@ -5305,7 +5307,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/projects/24/latest_validation"
+            "url": "{{host}}/api/v1/projects/24/latest_validation",
+            "description": "Most current project validation for specific project."
           },
           "response": []
         },
@@ -5324,7 +5327,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/projects/1/projection"
+            "url": "{{host}}/api/v1/projects/1/projection",
+            "description": "Current project for specific project."
           },
           "response": [
             {
