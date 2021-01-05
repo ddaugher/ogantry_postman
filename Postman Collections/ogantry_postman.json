@@ -5713,7 +5713,8 @@
                 "raw": {}
               }
             },
-            "url": "{{host}}/api/v1/projects/1/invalidate"
+            "url": "{{host}}/api/v1/projects/1/invalidate",
+            "description": "Invalidate a specific project.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path variable|project id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{id}}/invalidate\n```"
           },
           "response": [
             {
@@ -5738,7 +5739,8 @@
                     "raw": {}
                   }
                 },
-                "url": "{{host}}/api/v1/projects/1/invalidate"
+                "url": "{{host}}/api/v1/projects/1/invalidate",
+                "description": "Invalidate a specific project.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path variable|project id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{id}}/invalidate\n```"
               },
               "code": 200,
               "_postman_previewlanguage": "Text",
