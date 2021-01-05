@@ -5448,7 +5448,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/projects/24"
+            "url": "{{host}}/api/v1/projects/24",
+            "description": "Delete a specific project.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}\n```"
           },
           "response": []
         },
@@ -5477,7 +5478,8 @@
                 "raw": {}
               }
             },
-            "url": "{{host}}/api/v1/projects/2/validate"
+            "url": "{{host}}/api/v1/projects/2/validate",
+            "description": "Validate a specific project.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path variable|project id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{id}}/validate\n```"
           },
           "response": [
             {
@@ -5502,7 +5504,8 @@
                     "raw": {}
                   }
                 },
-                "url": "{{host}}/api/v1/projects/2/validate"
+                "url": "{{host}}/api/v1/projects/2/validate",
+                "description": "Validate a specific project.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path variable|project id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{id}}/validate\n```"
               },
               "code": 200,
               "_postman_previewlanguage": "Text",
