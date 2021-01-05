@@ -4927,23 +4927,7 @@
                 "type": "text"
               }
             ],
-            "url": {
-              "raw": "{{host}}/api/v1/projects?customer_ids=1",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "projects"
-              ],
-              "query": [
-                {
-                  "key": "customer_ids",
-                  "value": "1"
-                }
-              ]
-            },
+            "url": "{{host}}/api/v1/projects",
             "description": "List all projects.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|\n\n## Effective-date logic\n\nThe effective_date query param is optional. If the `effective_date` param is not supplied, the 'now()' of the system will be used to set the current effective date. If the value is supplied, the format must be: \n```\n{YYYY}-{MM}-{DD}T{h24}:{mm}:{ss}:{xxxxxx}Z\n```\n\nAbbreviation | Time Unit\n--- | ---\n`YYYY` | `full year number (0..9999) `\n`MM` | `month number (1..12)`\n`DD` | `day number (1..31)`\n`h24` | `hour of the day (00..23)`\n`mm` | `minutes of the hour (00..59) `\n`ss` | `seconds of the minute (00..60) `\n`xxxxxx` | `fractional second, based on the precision of microseconds `\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?effective_date=2020-09-23T01:21:15.574094Z\n```\n\n## Equal-to filters\n\nThe field's value must be equal to the filter value.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?name=sprite\n```\nThe following filters are supported:\n\n* `customer_name` (actual field is `customer.name)`\n* `description`\n* `fixed_bid_price`\n* `amount`\n* `last_validated_date`\n* `name`\n* `pid`\n* `region_name` (actual field is `region.name)`\n* `status`\n* `billing_type`\n* `validated`\n* `effective_date`\n* `customer_ids`\n* `position_ids`\n\n## Less-than filters\n\nThe field's value must be smaller than the filter's value.\nExample URL w/ query params:\n```\n{{host}}/api/v1/projects?cost_lt=90.00\n```\n\nThe following filter names are supported:\n\nFilter name | Must be smaller than\n--- | ---\n`fixed_bid_price_lt` | `fixed_bid_price`\n`amount_lt` | `amount`\n`last_validated_date_lt` | `last_validate_date`\n\n## Greater-than-or-equal-to filters\n\nThe field's value must be greater than or equal to the filter's value.\nExample URL w/ query params:\n```\n{{host}}/api/v1/projects?daily_billable_hours_gte=90.00\n```\nThe following filter names are supported:\n\nFilter name | Must be greater than or equal to\n--- | ---\n`fixed_bid_price_gte` | `fixed_bid_price`\n`amount_gte` | `amount`\n`last_validated_date_gte` | `last_validate_date`\n\n## String-starts-with filters\n\nThe string-type field's value must start with the filter's value.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?name_prefix=posit\n```\n\nThe following filter names are supported:\n\n* `customer_prefix` (actual field is `customer.name)`\n* `name_prefix` (actual field is `project.name)`\n* `region_prefix` (actual field is `region.name)`\n\n## String-contains filters\n\nThe string-type field's value must contain the filter's value.  The minimum number of characters required is 4.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?name_search=tion\n```\n\nThe following filter names are supported:\n\n* `customer_search` (actual field is `customer.name)`\n* `name_search` (actual field is `name)`\n* `region_search` (actual field is `region.name)`\n\n## Order-by sorting\n\nOrder-by sorting will support a single filter. If more than one 'order-by' filter is supplied via query param, the last definition will be used.\n\nThe supported filtering directions are:\n\nValue | Description\n--- | ---\n`asc` | `ascending`\n`asc_nulls_last` | `ascending nulls last`\n`asc_nulls_first` | `ascending nulls first`\n`desc` | `descending`\n`desc_nulls_last` | `descending nulls last`\n`desc_nulls_first` | `descending nulls first`\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?order_by=asc:name\n```\nThe following filters are supported:\n* `name`\n* `pid`\n* `description`\n* `status`\n* `billing_type`\n* `validated`\n* `fixed_bid_price`\n* `amount`\n* `last_validated_date`\n* `customer_name` (actual field is `customer.name)`\n* `region_name` (actual field is `region.name)`\n\n\n## Limit filter\n\nThe `limit` filter sets a maximum for the number of rows in the result set and may be used for pagination.  Default limit if not set is 50.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?limit=25\n```\n\n## Offset filter\n\nThe `offset` filter skips a number of rows in the result set and may be used for pagination.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?offset=2\n```\n\n## Position Date filter\n\nThe `position_date` filter will filter projects based on start_date/end_date of associated positions.  If an associated position is active, based on the supplied date, the parent project will be included in the result.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?position_date=2020-12-01\n```\n\n## Project Ids filter\n\nThe `project_ids` filter will filter projects based on supplied list of identifiers.  If an invalid id is supplied, the filter will not fail, but will not return a projection.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?project_ids=1,2,3\n```\n\n## Customer Ids filter\n\nThe `customer_ids` filter will filter customers based on supplied list of identifiers.  If an invalid id is supplied, the filter will not fail, but will not return a projection.\n\nExample URL w/ query params:\n\n```\n{{host}}/api/v1/projects?customer_ids=1,2,3\n```"
           },
           "response": [
@@ -6294,6 +6278,63 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {},\n    \"error_code\": 404,\n    \"errors\": \"Unable to validate project\",\n    \"message\": \"\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "1ec40a77-9a20-4433-8156-8ecf384171d1",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "{{host}}/api/v1/projects/1/validate"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "546"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 05 Jan 2021 02:09:02 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Flcz-o8JKyjM_7QAAAKC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"project\": {\n            \"amount\": \"100.00\",\n            \"billing_type\": \"Time and Materials\",\n            \"contacts\": [],\n            \"customer\": {\n                \"name\": \"Block of Hours2\",\n                \"ref\": \"/api/v1/customers/1\"\n            },\n            \"deleted_date\": null,\n            \"description\": null,\n            \"effective_end_date\": null,\n            \"effective_start_date\": \"2020-12-24T03:59:18.145679Z\",\n            \"end_date\": \"2020-06-01\",\n            \"extended_fields\": {},\n            \"fixed_bid_price\": null,\n            \"id\": 1,\n            \"name\": \"Falling Sabre R&D\",\n            \"pid\": 1,\n            \"ref\": \"/api/v1/projects/1\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-05-01\",\n            \"status\": \"Draft\",\n            \"validated\": \"YES\"\n        }\n    },\n    \"message\": \"Project validated successfully\",\n    \"success\": true\n}"
             }
           ]
         },
