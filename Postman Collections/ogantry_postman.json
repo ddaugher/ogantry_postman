@@ -5308,7 +5308,7 @@
               }
             ],
             "url": "{{host}}/api/v1/projects/24/latest_validation",
-            "description": "Most current project validation for specific project."
+            "description": "Most current project validation for specific project.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}/latest_validation\n```"
           },
           "response": []
         },
@@ -5328,7 +5328,7 @@
               }
             ],
             "url": "{{host}}/api/v1/projects/1/projection",
-            "description": "Current project for specific project."
+            "description": "Current project for specific project.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/projects/{{project_id}}/projection\n```"
           },
           "response": [
             {
