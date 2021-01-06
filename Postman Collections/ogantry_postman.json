@@ -8694,7 +8694,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/employees/4"
+            "url": "{{host}}/api/v1/employees/4",
+            "description": "Gets a specific employee.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|employee id|\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/1\n```"
           },
           "response": [
             {
@@ -8817,7 +8818,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/employees/4"
+            "url": "{{host}}/api/v1/employees/4",
+            "description": "## Description\nThe Employee API enables you to manage customers using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the employee endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|first_name|string|employee first name|no|yes|2|255\n|last_name|string|employee last name|no|yes|2|255\n|start_date|date|employee start date|no|yes|n/a|n/a\n|end_date|date|employee end date|2099-12-31|yes|n/a|n/a\n|daily_billable_hours|integer|daily billable hours|no|yes|0|8\n|email|string|employee email|no|yes|6|254\n|hourly_cost|decimal|employee hourly cost|no|yes|0|n/a\n|utilization_target|decimal|employee utilization target|no|yes|0.00|100.0\n|extended_fields|jsonb|extended fields associated with employee|no|no|n/a|n/a\n|employee_type_id|integer|id of associated employee type|no|yes|n/a|n/a\n|region_id|integer|id of associated region|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a"
           },
           "response": [
             {
