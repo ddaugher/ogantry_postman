@@ -13553,7 +13553,7 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/regions/1"
+            "url": "{{host}}/api/v1/regions/{{id}}"
           },
           "response": [
             {
