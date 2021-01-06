@@ -14866,7 +14866,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{host}}/api/v1/session?user[email]={{username}}&user[password]={{password}}",
+              "raw": "{{host}}/api/v1/session?user[email]=admin@nxdomain.com&user[password]=123123123",
               "host": [
                 "{{host}}"
               ],
@@ -14878,11 +14878,11 @@
               "query": [
                 {
                   "key": "user[email]",
-                  "value": "{{username}}"
+                  "value": "admin@nxdomain.com"
                 },
                 {
                   "key": "user[password]",
-                  "value": "{{password}}"
+                  "value": "123123123"
                 }
               ]
             }
