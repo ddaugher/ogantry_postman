@@ -11507,7 +11507,7 @@
               }
             },
             "url": "{{host}}/api/v1/position_types/1",
-            "description": "Update a specific position_type.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/contacts/customer/{{id}}\n```"
+            "description": "Update a specific position_type.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/position_types/{{id}}\n```"
           },
           "response": [
             {
