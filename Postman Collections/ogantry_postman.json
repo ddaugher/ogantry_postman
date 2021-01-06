@@ -13674,7 +13674,30 @@
           ]
         }
       ],
-      "_postman_id": "50b73076-ea65-4374-8e2a-ab05cd396413"
+      "_postman_id": "50b73076-ea65-4374-8e2a-ab05cd396413",
+      "description": "## Description\nThe Regions API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the regions endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "8695eab9-9d73-4af4-a395-3590200b1cab",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "b3605c5d-7a29-408b-9cc1-3b50ce785b7e",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "work_exception_types",
