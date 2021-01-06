@@ -7739,14 +7739,61 @@
           },
           "response": [
             {
-              "id": "36b72105-aef2-4a9d-918f-a12283aa9fa4",
-              "name": "200",
+              "id": "f49f4b11-c00f-4822-946c-200062410c8b",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:57:14 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-pDwvyO8AalQAAAWF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "4c9cac1a-a9f9-4ece-bf86-380db39a9996",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
                     "type": "text"
                   }
                 ],
@@ -7762,7 +7809,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "295"
+                  "value": "1707"
                 },
                 {
                   "key": "content-type",
@@ -7770,7 +7817,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:00:14 GMT"
+                  "value": "Wed, 06 Jan 2021 01:00:27 GMT"
                 },
                 {
                   "key": "server",
@@ -7778,12 +7825,16 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZDFLt7MDk2UUAADzC"
+                  "value": "Fld-0OZPlJXpP_UAAAXF"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "5"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employees\": [\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 5,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/5\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 3,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/3\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {\n                        \"ext_number\": 2,\n                        \"ext_string\": \"dog\"\n                    },\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 4,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/4\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"extended_fields\": {\n                        \"ext_number\": 2,\n                        \"ext_string\": \"dog\"\n                    },\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 6,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/6\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 7,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/7\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -7807,18 +7858,65 @@
           },
           "response": [
             {
-              "id": "e5fa387b-87ea-4c25-910d-a569c142f3e2",
-              "name": "200",
+              "id": "5196e483-e342-4a12-900b-9e0d53060eaa",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
+                    "value": "{{access_token}}",
                     "type": "text"
                   }
                 ],
-                "url": "{{host}}/api/v1/employees"
+                "url": "{{host}}/api/v1/employees/ids"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:57:45 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-q28pShlvHooAAAEC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "22be75bb-17a8-47c7-bc09-f600b6f2c0e4",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees/ids"
               },
               "status": "OK",
               "code": 200,
@@ -7830,7 +7928,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "295"
+                  "value": "56"
                 },
                 {
                   "key": "content-type",
@@ -7838,7 +7936,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:00:14 GMT"
+                  "value": "Wed, 06 Jan 2021 01:00:48 GMT"
                 },
                 {
                   "key": "server",
@@ -7846,12 +7944,16 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZDFLt7MDk2UUAADzC"
+                  "value": "Fld-1dmrAUm1_LcAAAGC"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "5"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"employee_ids\": [\n        3,\n        4,\n        5,\n        6,\n        7\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -7875,18 +7977,65 @@
           },
           "response": [
             {
-              "id": "e654c689-9392-474e-9256-634d2b6a05ac",
-              "name": "200",
+              "id": "113bfe09-86cc-4539-b5d3-a4b2283dd9b7",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
+                    "value": "{{access_token}}",
                     "type": "text"
                   }
                 ],
-                "url": "{{host}}/api/v1/employees"
+                "url": "{{host}}/api/v1/employees/plus_utilization"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:57:54 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-rW-AB0Gf-kEAAAWK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "0d3f8eed-5e0f-4ab3-b5c3-29d0b1830f74",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees/plus_utilization"
               },
               "status": "OK",
               "code": 200,
@@ -7898,7 +8047,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "295"
+                  "value": "2112"
                 },
                 {
                   "key": "content-type",
@@ -7906,7 +8055,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:00:14 GMT"
+                  "value": "Wed, 06 Jan 2021 01:01:05 GMT"
                 },
                 {
                   "key": "server",
@@ -7914,12 +8063,16 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZDFLt7MDk2UUAADzC"
+                  "value": "Fld-2bVc6Fl4QWoAAAOD"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "5"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employees\": [\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 5,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/5\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\",\n                    \"utilizations\": [\n                        {\n                            \"utilization\": {\n                                \"bench_cost\": \"33600.00\",\n                                \"employee_hours\": \"168.00\",\n                                \"end_date\": \"2021-01-31\",\n                                \"position_hours\": \"0.00\",\n                                \"start_date\": \"2021-01-01\",\n                                \"utilization\": \"0.00\"\n                            }\n                        }\n                    ]\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 3,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/3\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\",\n                    \"utilizations\": [\n                        {\n                            \"utilization\": {\n                                \"bench_cost\": \"33600.00\",\n                                \"employee_hours\": \"168.00\",\n                                \"end_date\": \"2021-01-31\",\n                                \"position_hours\": \"0.00\",\n                                \"start_date\": \"2021-01-01\",\n                                \"utilization\": \"0.00\"\n                            }\n                        }\n                    ]\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 4,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/4\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\",\n                    \"utilizations\": [\n                        {\n                            \"utilization\": {\n                                \"bench_cost\": \"33600.00\",\n                                \"employee_hours\": \"168.00\",\n                                \"end_date\": \"2021-01-31\",\n                                \"position_hours\": \"0.00\",\n                                \"start_date\": \"2021-01-01\",\n                                \"utilization\": \"0.00\"\n                            }\n                        }\n                    ]\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 6,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/6\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\",\n                    \"utilizations\": []\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 7,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/7\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\",\n                    \"utilizations\": []\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -7943,15 +8096,62 @@
           },
           "response": [
             {
-              "id": "f7e0a271-d016-4f22-ad93-1934c425d2c9",
-              "name": "200",
+              "id": "7de30200-6dd8-4da3-883c-b2f22dcdfabd",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
-                    "type": "text"
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:58:03 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-r50jpTpjUbEAAAJG"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "67d2c792-5584-428d-802e-85ee8d5433a6",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
                   }
                 ],
                 "url": "{{host}}/api/v1/employees"
@@ -7966,7 +8166,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "295"
+                  "value": "1707"
                 },
                 {
                   "key": "content-type",
@@ -7974,7 +8174,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:00:14 GMT"
+                  "value": "Wed, 06 Jan 2021 01:01:22 GMT"
                 },
                 {
                   "key": "server",
@@ -7982,12 +8182,16 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZDFLt7MDk2UUAADzC"
+                  "value": "Fld-3ZyOeYuYbpIAAAHB"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "5"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employees\": [\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 5,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/5\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 3,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/3\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {\n                        \"ext_number\": 2,\n                        \"ext_string\": \"dog\"\n                    },\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 4,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/4\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"extended_fields\": {\n                        \"ext_number\": 2,\n                        \"ext_string\": \"dog\"\n                    },\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 6,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/6\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 7,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/7\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8006,7 +8210,30 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/employees/with/position"
+            "url": {
+              "raw": "{{host}}/api/v1/employees/with/position?start_date=2020-05-01&end_date=2020-06-01",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "with",
+                "position"
+              ],
+              "query": [
+                {
+                  "key": "start_date",
+                  "value": "2020-05-01"
+                },
+                {
+                  "key": "end_date",
+                  "value": "2020-06-01"
+                }
+              ]
+            },
+            "description": "Returns the employees with positions.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n|effective_date|datetime|query|effective date|no|\n|start_date|date|query|date filter applied to start date for associated position|no|\n|end_date|date|query|date filter applied to end date for associated position|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/with/position?start_date=2020-05-01&end_date=2020-06-01\n```"
           },
           "response": [
             {
@@ -8055,6 +8282,144 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+            },
+            {
+              "id": "a96bf3d8-2fcb-46c7-b439-3ce5851cfbd3",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/employees/with/position?start_date=2020-05-01&end_date=2020-06-01",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "employees",
+                    "with",
+                    "position"
+                  ],
+                  "query": [
+                    {
+                      "key": "start_date",
+                      "value": "2020-05-01"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "2020-06-01"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:58:13 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-sdzAcZBy_38AAAEE"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "33493c85-2aef-4159-9f05-2a3f5ebcacd3",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/employees/with/position?start_date=2020-05-01&end_date=2020-06-01",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "employees",
+                    "with",
+                    "position"
+                  ],
+                  "query": [
+                    {
+                      "key": "start_date",
+                      "value": "2020-05-01"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "2020-06-01"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "369"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 01:01:38 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-4Y4Mwr_boFEAAAEH"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"employees\": [\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 3,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/3\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8077,18 +8442,91 @@
           },
           "response": [
             {
-              "id": "73ab8b90-6d26-4b3b-982c-6a808554687f",
-              "name": "200",
+              "id": "44ee1cab-2ff3-467f-81a2-990d953167f7",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
-                    "type": "text"
+                    "type": "text",
+                    "value": "{{access_token}}"
                   }
                 ],
-                "url": "{{host}}/api/v1/employees"
+                "url": "{{host}}/api/v1/employees/salaried/utilization"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:58:22 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-tBlBSEWV6XgAAAGB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "42506f16-86a9-419a-85e6-ce6aa25915b7",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/v1/employees/salaried/utilization?ids=3,4,5,6,7&start_date=2020-05-01&end_date=2020-06-01",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "employees",
+                    "salaried",
+                    "utilization"
+                  ],
+                  "query": [
+                    {
+                      "key": "ids",
+                      "value": "3,4,5,6,7"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "2020-05-01"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "2020-06-01"
+                    }
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
@@ -8100,7 +8538,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "295"
+                  "value": "3186"
                 },
                 {
                   "key": "content-type",
@@ -8108,7 +8546,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:00:14 GMT"
+                  "value": "Wed, 06 Jan 2021 01:12:36 GMT"
                 },
                 {
                   "key": "server",
@@ -8116,12 +8554,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZDFLt7MDk2UUAADzC"
+                  "value": "Fld_ep7MlTgG1dEAAAAH"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"utilizations\": [\n            {\n                \"utilization\": {\n                    \"bench_cost\": \"0.00\",\n                    \"employee\": {\n                        \"daily_billable_hours\": 8,\n                        \"deleted_date\": null,\n                        \"effective_end_date\": \"2020-12-29T05:43:05.206285Z\",\n                        \"effective_start_date\": \"2020-12-29T05:40:02.820845Z\",\n                        \"email\": \"e@f.com\",\n                        \"employee_type\": {\n                            \"is_employee\": true,\n                            \"name\": \"employee type 2\"\n                        },\n                        \"end_date\": \"2099-09-14\",\n                        \"first_name\": \"first name\",\n                        \"hourly_cost\": \"200.00\",\n                        \"id\": 3,\n                        \"last_name\": \"last_name\",\n                        \"pid\": 3,\n                        \"ref\": \"/api/v1/employees/3\",\n                        \"region\": \"test\",\n                        \"start_date\": \"2020-09-14\",\n                        \"type\": \"employee type 2\",\n                        \"updated_at\": \"2020-12-29T05:43:05\",\n                        \"utilization_target\": \"100.00\"\n                    },\n                    \"employee_hours\": \"0.00\",\n                    \"position_hours\": \"0.00\",\n                    \"utilization\": \"0.00\"\n                }\n            },\n            {\n                \"utilization\": {\n                    \"bench_cost\": \"0.00\",\n                    \"employee\": {\n                        \"daily_billable_hours\": 8,\n                        \"deleted_date\": null,\n                        \"effective_end_date\": \"2021-01-06T00:51:10.919672Z\",\n                        \"effective_start_date\": \"2020-12-29T05:43:05.206286Z\",\n                        \"email\": \"e@e.com\",\n                        \"employee_type\": {\n                            \"is_employee\": true,\n                            \"name\": \"employee type 2\"\n                        },\n                        \"end_date\": \"2099-09-14\",\n                        \"first_name\": \"first name\",\n                        \"hourly_cost\": \"200.00\",\n                        \"id\": 4,\n                        \"last_name\": \"last_name\\n\",\n                        \"pid\": 3,\n                        \"ref\": \"/api/v1/employees/4\",\n                        \"region\": \"test\",\n                        \"start_date\": \"2020-09-14\",\n                        \"type\": \"employee type 2\",\n                        \"updated_at\": \"2021-01-06T00:51:10\",\n                        \"utilization_target\": \"100.00\"\n                    },\n                    \"employee_hours\": \"0.00\",\n                    \"position_hours\": \"0.00\",\n                    \"utilization\": \"0.00\"\n                }\n            },\n            {\n                \"utilization\": {\n                    \"bench_cost\": \"0.00\",\n                    \"employee\": {\n                        \"daily_billable_hours\": 8,\n                        \"deleted_date\": null,\n                        \"effective_end_date\": null,\n                        \"effective_start_date\": \"2020-12-29T20:02:23.659746Z\",\n                        \"email\": \"e@f.com\",\n                        \"employee_type\": {\n                            \"is_employee\": true,\n                            \"name\": \"employee type 2\"\n                        },\n                        \"end_date\": \"2099-09-14\",\n                        \"first_name\": \"first name\",\n                        \"hourly_cost\": \"200.00\",\n                        \"id\": 5,\n                        \"last_name\": \"last_name\",\n                        \"pid\": 5,\n                        \"ref\": \"/api/v1/employees/5\",\n                        \"region\": \"test\",\n                        \"start_date\": \"2020-09-14\",\n                        \"type\": \"employee type 2\",\n                        \"updated_at\": \"2020-12-29T20:02:23\",\n                        \"utilization_target\": \"100.00\"\n                    },\n                    \"employee_hours\": \"0.00\",\n                    \"position_hours\": \"0.00\",\n                    \"utilization\": \"0.00\"\n                }\n            },\n            {\n                \"utilization\": {\n                    \"bench_cost\": \"0.00\",\n                    \"employee\": {\n                        \"daily_billable_hours\": 8,\n                        \"deleted_date\": null,\n                        \"effective_end_date\": null,\n                        \"effective_start_date\": \"2021-01-06T00:51:10.919673Z\",\n                        \"email\": \"e@e.com\",\n                        \"employee_type\": {\n                            \"is_employee\": true,\n                            \"name\": \"employee type 2\"\n                        },\n                        \"end_date\": \"2020-09-14\",\n                        \"first_name\": \"first name\",\n                        \"hourly_cost\": \"200.00\",\n                        \"id\": 6,\n                        \"last_name\": \"last_name\\n\",\n                        \"pid\": 3,\n                        \"ref\": \"/api/v1/employees/6\",\n                        \"region\": \"test\",\n                        \"start_date\": \"2020-09-14\",\n                        \"type\": \"employee type 2\",\n                        \"updated_at\": \"2020-12-29T05:40:02\",\n                        \"utilization_target\": \"100.00\"\n                    },\n                    \"employee_hours\": \"0.00\",\n                    \"position_hours\": \"0.00\",\n                    \"utilization\": \"0.00\"\n                }\n            },\n            {\n                \"utilization\": {\n                    \"bench_cost\": \"0.00\",\n                    \"employee\": {\n                        \"daily_billable_hours\": 8,\n                        \"deleted_date\": null,\n                        \"effective_end_date\": null,\n                        \"effective_start_date\": \"2021-01-06T00:51:23.497349Z\",\n                        \"email\": \"e@f.com\",\n                        \"employee_type\": {\n                            \"is_employee\": true,\n                            \"name\": \"employee type 2\"\n                        },\n                        \"end_date\": \"2020-09-14\",\n                        \"first_name\": \"first name\",\n                        \"hourly_cost\": \"200.00\",\n                        \"id\": 7,\n                        \"last_name\": \"last_name\",\n                        \"pid\": 7,\n                        \"ref\": \"/api/v1/employees/7\",\n                        \"region\": \"test\",\n                        \"start_date\": \"2020-09-14\",\n                        \"type\": \"employee type 2\",\n                        \"updated_at\": \"2021-01-06T00:51:23\",\n                        \"utilization_target\": \"100.00\"\n                    },\n                    \"employee_hours\": \"0.00\",\n                    \"position_hours\": \"0.00\",\n                    \"utilization\": \"0.00\"\n                }\n            }\n        ]\n    },\n    \"effective_date\": \"2021-01-06T01:12:36.529507Z\",\n    \"end_date\": \"2020-06-01\",\n    \"message\": \"\",\n    \"start_date\": \"2020-05-01\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8144,18 +8582,65 @@
           },
           "response": [
             {
-              "id": "41e293fb-3b8d-4898-9ebc-5b6c72903c7a",
-              "name": "200",
+              "id": "ddc1c807-e227-4201-954c-69293dbc8852",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
-                    "type": "text"
+                    "type": "text",
+                    "value": "{{access_token}}"
                   }
                 ],
-                "url": "{{host}}/api/v1/employees"
+                "url": "{{host}}/api/v1/employees/without/position"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:58:32 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-tk_lMLCvl8cAAAXK"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "a8071354-d156-47b9-a373-09e1410f4dbe",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees/without/position"
               },
               "status": "OK",
               "code": 200,
@@ -8167,7 +8652,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "295"
+                  "value": "1038"
                 },
                 {
                   "key": "content-type",
@@ -8175,7 +8660,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:00:14 GMT"
+                  "value": "Wed, 06 Jan 2021 01:13:30 GMT"
                 },
                 {
                   "key": "server",
@@ -8183,12 +8668,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZDFLt7MDk2UUAADzC"
+                  "value": "Fld_hz20z7DHY4cAAAAD"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"employee\": {\n                \"daily_billable_hours\": 8,\n                \"email\": \"e@e.com\",\n                \"employee_type\": \"1099\",\n                \"end_date\": \"2020-09-14\",\n                \"hourly_cost\": \"200.00\",\n                \"id\": 1,\n                \"name\": \"employee1\",\n                \"ref\": \"/api/v1/employees/1\",\n                \"region\": \"region1\",\n                \"start_date\": \"2020-09-14\",\n                \"utilization_target\": \"100.00\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employees\": [\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2099-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 5,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/5\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@e.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"extended_fields\": {\n                        \"ext_number\": 2,\n                        \"ext_string\": \"dog\"\n                    },\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 6,\n                    \"last_name\": \"last_name\\n\",\n                    \"ref\": \"/api/v1/employees/6\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"daily_billable_hours\": 8,\n                    \"email\": \"e@f.com\",\n                    \"employee_type\": \"employee type 2\",\n                    \"end_date\": \"2020-09-14\",\n                    \"extended_fields\": {},\n                    \"first_name\": \"first name\",\n                    \"hourly_cost\": \"200.00\",\n                    \"id\": 7,\n                    \"last_name\": \"last_name\",\n                    \"ref\": \"/api/v1/employees/7\",\n                    \"region\": \"test\",\n                    \"start_date\": \"2020-09-14\",\n                    \"utilization_target\": \"100.00\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8207,9 +8692,104 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/employees/1"
+            "url": "{{host}}/api/v1/employees/4"
           },
-          "response": []
+          "response": [
+            {
+              "id": "43e7d6fb-51f4-476d-9d8b-7affa00eba38",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees/4"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:58:42 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-uJEw6W6YBboAAAFC"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "0e16e8c4-4ccb-4db5-bc1e-92e37aa75564",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees/4"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "419"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 01:13:49 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld_i534SXC2q-IAAAAG"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type\": \"employee type 2\",\n            \"end_date\": \"2099-09-14\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            },\n            \"first_name\": \"first name\",\n            \"hourly_cost\": \"200.00\",\n            \"id\": 4,\n            \"last_name\": \"last_name\\n\",\n            \"ref\": \"/api/v1/employees/4\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n    },\n    \"message\": \"Employee retrieved successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "update",
@@ -8239,27 +8819,83 @@
           },
           "response": [
             {
-              "id": "9c2dcd5f-e420-46d5-964a-28e3661260bc",
-              "name": "200",
+              "id": "4affe58e-bff2-45fa-8dbe-ecd82de392f6",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "PUT",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s",
+                    "value": "{{access_token}}",
                     "type": "text"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"name\": \"employee1\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n}   ",
+                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"name\": \"employee1\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n        }\n}   ",
                   "options": {
                     "raw": {
                       "language": "json"
                     }
                   }
                 },
-                "url": "{{host}}/api/v1/employees/1"
+                "url": "{{host}}/api/v1/employees/4"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:58:51 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-uuF-fdDk2SIAAAEI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "c597b195-aff0-4e2e-bc04-cf2c22f7a217",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"name\": \"employee1\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n        }\n}   ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/employees/5"
               },
               "status": "OK",
               "code": 200,
@@ -8271,7 +8907,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "322"
+                  "value": "415"
                 },
                 {
                   "key": "content-type",
@@ -8279,7 +8915,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:05:40 GMT"
+                  "value": "Wed, 06 Jan 2021 01:14:19 GMT"
                 },
                 {
                   "key": "server",
@@ -8287,12 +8923,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZWF60XDzLBO0AAIkB"
+                  "value": "Fld_kshQ4Zia6AkAAAAI"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {\n        \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type\": \"1099\",\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"id\": 1,\n            \"name\": \"employee1\",\n            \"ref\": \"/api/v1/employees/1\",\n            \"region\": \"region1\",\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n    },\n    \"message\": \"Employee updated successfully\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type\": \"employee type 2\",\n            \"end_date\": \"2020-09-14\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            },\n            \"first_name\": \"first name\",\n            \"hourly_cost\": \"200.00\",\n            \"id\": 8,\n            \"last_name\": \"last_name\",\n            \"ref\": \"/api/v1/employees/8\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n    },\n    \"message\": \"Employee updated successfully\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8378,6 +9014,118 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n    \"data\": {},\n    \"error_code\": 400,\n    \"errors\": \"unique_email: has already been taken, \",\n    \"message\": \"Unable to create employee\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "a45f5634-e9c7-4827-9dd2-ce4f73902783",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@f.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"first_name\": \"first name\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"last_name\": \"last_name\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n\n        }\n}   ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/employees"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:59:02 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-vWuvcA180lcAAATJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "bb01313b-fa62-4416-a719-c1544f8ea45d",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@f.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"first_name\": \"first name\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"last_name\": \"last_name\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n\n        }\n}   ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/employees"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "386"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 01:14:33 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld_lgPmMmW1QLsAAAlB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@f.com\",\n            \"employee_type\": \"employee type 2\",\n            \"end_date\": \"2020-09-14\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            },\n            \"first_name\": \"first name\",\n            \"hourly_cost\": \"200.00\",\n            \"id\": 9,\n            \"last_name\": \"last_name\",\n            \"ref\": \"/api/v1/employees/9\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8400,18 +9148,65 @@
           },
           "response": [
             {
-              "id": "824a24bf-3ba5-4ee9-b862-bfaf6c803c5b",
-              "name": "200",
+              "id": "c7df79d2-d4c5-4030-acf7-e900367e8b90",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "DELETE",
                 "header": [
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "SFMyNTY.NmQ4MTNiNDYtMTc3Zi00MWY2LTg0M2YtNjg1ZDM4ODJlYjBm.SYhHYLzIWS_WRT4sE3cmAecknp7NqeSwKotUFrBhg7s"
+                    "value": "{{access_token}}"
                   }
                 ],
-                "url": "{{host}}/api/v1/employees/3"
+                "url": "{{host}}/api/v1/employees/4"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 00:59:13 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "Fld-v9mD_h0g-SEAAAKG"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "c99f4670-3def-4567-a1f0-157b968c9da1",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employees/4"
               },
               "status": "OK",
               "code": 200,
@@ -8423,7 +9218,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "68"
+                  "value": "65"
                 },
                 {
                   "key": "content-type",
@@ -8431,7 +9226,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 04:09:17 GMT"
+                  "value": "Wed, 06 Jan 2021 01:14:59 GMT"
                 },
                 {
                   "key": "server",
@@ -8439,12 +9234,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTZirnm14CtaRgAAInB"
+                  "value": "Fld_m_oJ2jKbNl8AAAJH"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"message\": \"Employee deleted successfully\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {},\n    \"message\": \"Unable to delete employee\",\n    \"success\": false\n}"
             }
           ]
         }
