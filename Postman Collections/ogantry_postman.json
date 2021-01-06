@@ -8233,7 +8233,7 @@
                 }
               ]
             },
-            "description": "Returns the employees with positions.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|project id|yes|\n|effective_date|datetime|query|effective date|no|\n|start_date|date|query|date filter applied to start date for associated position|no|\n|end_date|date|query|date filter applied to end date for associated position|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/with/position?start_date=2020-05-01&end_date=2020-06-01\n```"
+            "description": "Returns the employees with positions.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|effective_date|datetime|query|effective date|no|\n|start_date|date|query|date filter applied to start date for associated position|no|\n|end_date|date|query|date filter applied to end date for associated position|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/with/position?start_date=2020-05-01&end_date=2020-06-01\n```"
           },
           "response": [
             {
@@ -8438,7 +8438,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/employees/salaried/utilization"
+            "url": "{{host}}/api/v1/employees/salaried/utilization",
+            "description": "Returns employee utilizations.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|ids|list of numbers (comma separated)|query|employee ids|yes|\n|effective_date|datetime|query|effective date|no|\n|start_date|date|query|date filter applied to start date for associated position|no|\n|end_date|date|query|date filter applied to end date for associated position|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/with/position?ids=1,2,3&start_date=2020-05-01&end_date=2020-06-01\n```"
           },
           "response": [
             {
@@ -8578,7 +8579,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/employees/without/position"
+            "url": "{{host}}/api/v1/employees/without/position",
+            "description": "Returns the employees without positions.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|effective_date|datetime|query|effective date|no|\n|start_date|date|query|date filter applied to start date for associated position|no|\n|end_date|date|query|date filter applied to end date for associated position|no|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/without/position?start_date=2020-05-01&end_date=2020-06-01\n```"
           },
           "response": [
             {
