@@ -9502,7 +9502,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types/1"
+            "url": "{{host}}/api/v1/work_exception_types/1",
+            "description": "Get a specific employee_type.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employee_types/1\n```"
           },
           "response": []
         },
