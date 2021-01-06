@@ -11227,7 +11227,30 @@
           ]
         }
       ],
-      "_postman_id": "9b1c8ef7-1f38-44a9-a378-179503e115cb"
+      "_postman_id": "9b1c8ef7-1f38-44a9-a378-179503e115cb",
+      "description": "## Description\nThe Position API enables you to manage customers using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the position endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|name|no|yes|5|255\n|bill_rate|decimal|billing rate for the position|no|yes|0.00|n/a\n|cost|decimal|cost of the position, will override employee if set|no|no|0.00|n/a\n|daily_billable_hours|integer|daily hours expected to be billed|no|yes|0|8\n|start_date|date|start date of the position|no|yes|n/a|n/a\n|end_date|date|end date of the position|no|yes|n/a|n/a\n|extended_fields|jsonb|extended fields|no|no|n/a|n/a\n|employee_id|integer|id of associated employee|no|yes|n/a|n/a\n|project_id|integer|id of associated project|no|yes|n/a|n/a\n|position_type_id|integer|id of associated position type|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "a5bd5214-a2e3-4f03-b29c-0f46bce29157",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "fef4a16b-5124-4ba0-a66c-e94af3d6cb73",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "position_types",
@@ -14368,7 +14391,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/daily_expense_types"
+            "url": "{{host}}/api/v1/daily_expense_types",
+            "description": "Lists all daily_expense_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|"
           },
           "response": [
             {
@@ -14529,7 +14553,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/daily_expense_types/1"
+            "url": "{{host}}/api/v1/daily_expense_types/1",
+            "description": "Get a specific daily_expense_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/daily_expense_types/1\n```"
           },
           "response": []
         },
@@ -14548,7 +14573,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/daily_expense_types/1"
+            "url": "{{host}}/api/v1/daily_expense_types/1",
+            "description": "Delete a specific daily_expense_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/daily_expense_types/1\n```"
           },
           "response": [
             {
@@ -14624,7 +14650,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/daily_expense_types/1"
+            "url": "{{host}}/api/v1/daily_expense_types/1",
+            "description": "Update a specific daily_expense_types.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/daily_expense_types/{{id}}\n```"
           },
           "response": [
             {
@@ -14709,7 +14736,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/daily_expense_types"
+            "url": "{{host}}/api/v1/daily_expense_types",
+            "description": "Create a specific daily_expense_types.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/daily_expense_types/{{id}}\n```"
           },
           "response": [
             {
