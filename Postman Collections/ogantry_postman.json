@@ -13805,7 +13805,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types"
+            "url": "{{host}}/api/v1/work_exception_types",
+            "description": "Lists all work_exception_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|"
           },
           "response": [
             {
@@ -13966,7 +13967,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types/1"
+            "url": "{{host}}/api/v1/work_exception_types/1",
+            "description": "Get a specific work_exception_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/work_exception_types/1\n```"
           },
           "response": []
         },
@@ -13985,7 +13987,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types/1"
+            "url": "{{host}}/api/v1/work_exception_types/1",
+            "description": "Delete a specific work_exception_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/work_exception_types/1\n```"
           },
           "response": [
             {
@@ -14061,7 +14064,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/work_exception_types/1"
+            "url": "{{host}}/api/v1/work_exception_types/1",
+            "description": "Update a specific work_exception_types.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/work_exception_types/{{id}}\n```"
           },
           "response": [
             {
@@ -14146,7 +14150,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/work_exception_types"
+            "url": "{{host}}/api/v1/work_exception_types",
+            "description": "Create a specific work_exception_types.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/work_exception_types/{{id}}\n```"
           },
           "response": [
             {
@@ -14878,7 +14883,30 @@
           ]
         }
       ],
-      "_postman_id": "c327f865-f62d-4122-b195-cb9d3af9f4bc"
+      "_postman_id": "c327f865-f62d-4122-b195-cb9d3af9f4bc",
+      "description": "## Description\nThe daily_expense_types API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the daily_expense_types contact endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "5093d51c-7156-415b-9b6b-bec3a1e2dc5c",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "c1a5e11d-1a6f-42b4-885f-600aaceefb06",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "session",
