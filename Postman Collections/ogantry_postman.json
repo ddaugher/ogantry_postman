@@ -9522,7 +9522,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types/1"
+            "url": "{{host}}/api/v1/work_exception_types/1",
+            "description": "Delete a specific employee_type.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employee_types/1\n```"
           },
           "response": [
             {
@@ -9598,7 +9599,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/employee_types/1"
+            "url": "{{host}}/api/v1/employee_types/1",
+            "description": "Update a specific employee_type.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|name|string|body|name|\n|is_employee|boolean|body|boolean indicating whether or not the employee type is an employee|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employee_types/{{id}}\n```"
           },
           "response": [
             {
