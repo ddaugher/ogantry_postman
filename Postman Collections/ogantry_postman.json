@@ -9340,7 +9340,8 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types"
+            "url": "{{host}}/api/v1/work_exception_types",
+            "description": "Lists all employee_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|"
           },
           "response": [
             {
