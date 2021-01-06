@@ -13341,7 +13341,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/regions/{{id}}"
+            "url": "{{host}}/api/v1/regions/{{id}}",
+            "description": "Delete a specific region.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/regions/1\n```"
           },
           "response": [
             {
