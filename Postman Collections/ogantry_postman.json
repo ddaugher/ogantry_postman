@@ -8006,33 +8006,7 @@
                 "type": "text"
               }
             ],
-            "url": {
-              "raw": "{{host}}/api/v1/employees/with/position?effective_date=2016-05-01 19:36:20.829428Z&first=2016-12-01&last=2016-12-01",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "employees",
-                "with",
-                "position"
-              ],
-              "query": [
-                {
-                  "key": "effective_date",
-                  "value": "2016-05-01 19:36:20.829428Z"
-                },
-                {
-                  "key": "first",
-                  "value": "2016-12-01"
-                },
-                {
-                  "key": "last",
-                  "value": "2016-12-01"
-                }
-              ]
-            }
+            "url": "{{host}}/api/v1/employees/with/position"
           },
           "response": [
             {
