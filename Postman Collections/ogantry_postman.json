@@ -8313,7 +8313,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@f.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"first_name\": \"first name\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"last_name\": \"last_name\"\n        }\n}   ",
+              "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@f.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"first_name\": \"first name\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"last_name\": \"last_name\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n\n        }\n}   ",
               "options": {
                 "raw": {
                   "language": "json"
@@ -8396,7 +8396,7 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/employees/3"
+            "url": "{{host}}/api/v1/employees/4"
           },
           "response": [
             {
