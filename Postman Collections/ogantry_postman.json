@@ -9340,70 +9340,23 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/work_exception_types",
+            "url": "{{host}}/api/v1/employee_types",
             "description": "Lists all employee_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|"
           },
           "response": [
             {
-              "id": "6c8f6b36-4c07-4b1c-b740-b554ff2ac8f3",
-              "name": "200",
+              "id": "3f47ac9f-6dce-4e91-af4c-1aa44ad40273",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.NGU2MjUxZGEtNjE3MC00ZjFlLWIzOTUtNjJkM2VlYzQ1Zjhh.75RJzOo9OPsZb6Cm4mOSLYtGWSvFh7WUwMRvO3o5Rt8",
+                    "value": "{{access_token}}",
                     "type": "text"
                   }
                 ],
-                "url": "{{host}}/api/v1/positions"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "cache-control",
-                  "value": "max-age=0, private, must-revalidate"
-                },
-                {
-                  "key": "content-length",
-                  "value": "55"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:00:52 GMT"
-                },
-                {
-                  "key": "server",
-                  "value": "Cowboy"
-                },
-                {
-                  "key": "x-request-id",
-                  "value": "FjTL_Ljhagu9mDIAADSD"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"message\": \"No results found\",\n    \"success\": true\n}"
-            },
-            {
-              "id": "9ba74b5b-00d9-4787-8fcd-69110335e6cf",
-              "name": "401",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{host}}/api/v1/positions"
+                "url": "{{host}}/api/v1/employee_types"
               },
               "status": "Unauthorized",
               "code": 401,
@@ -9415,7 +9368,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "86"
+                  "value": "137"
                 },
                 {
                   "key": "content-type",
@@ -9423,7 +9376,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Mon, 14 Sep 2020 23:53:07 GMT"
+                  "value": "Wed, 06 Jan 2021 02:02:51 GMT"
                 },
                 {
                   "key": "server",
@@ -9431,26 +9384,26 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTLkCibmgAfA8QAADxB"
+                  "value": "FleCOMaGWviBkLkAAACD"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"\",\n    \"success\": false\n}"
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             },
             {
-              "id": "d3e68c3f-fa1b-480b-a9a7-9ec1689555b6",
-              "name": "200",
+              "id": "7ceb84ed-869e-4aa8-bec1-40947cde94e4",
+              "name": "200 OK",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.M2MyNTVmNzAtMzhjYi00NTQzLTkyMWMtMTgwOTNjYTliODc1.dDWiIqSxwl-ncDbdSpJS3vJFcKFCEZ5EBeq7A-HOYl4",
+                    "value": "{{access_token}}",
                     "type": "text"
                   }
                 ],
-                "url": "{{host}}/api/v1/positions"
+                "url": "{{host}}/api/v1/employee_types"
               },
               "status": "OK",
               "code": 200,
@@ -9462,7 +9415,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "416"
+                  "value": "161"
                 },
                 {
                   "key": "content-type",
@@ -9470,7 +9423,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:24:59 GMT"
+                  "value": "Wed, 06 Jan 2021 02:03:54 GMT"
                 },
                 {
                   "key": "server",
@@ -9478,12 +9431,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTNTWFPqOjH3R8AAEbB"
+                  "value": "FleCR2jgA5Abi7IAAAAI"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"position\": {\n                \"bill_rate\": \"100.00\",\n                \"cost\": \"100.00\",\n                \"daily_billable_hours\": 8,\n                \"deleted_date\": null,\n                \"effective_end_date\": null,\n                \"effective_start_date\": \"2020-09-15T00:24:32.274553Z\",\n                \"employee_ref\": \"/api/v1/employees/1\",\n                \"end_date\": \"2020-06-01\",\n                \"id\": 14,\n                \"name\": \"position1\",\n                \"pid\": 14,\n                \"project_ref\": \"/api/v1/projects/2\",\n                \"ref\": \"/api/v1/positions/14\",\n                \"start_date\": \"2020-05-01\",\n                \"type\": \"type1\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employee_types\": [\n            {\n                \"employee_type\": {\n                    \"id\": 1,\n                    \"is_employee\": true,\n                    \"name\": \"employee type 1\",\n                    \"ref\": \"/api/v1/employee_types/1\"\n                }\n            }\n        ]\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -9505,7 +9458,102 @@
             "url": "{{host}}/api/v1/employee_types/1",
             "description": "Get a specific employee_type.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|id|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employee_types/1\n```"
           },
-          "response": []
+          "response": [
+            {
+              "id": "d7f83f5e-5181-4323-9877-b51a5a049089",
+              "name": "401 Unauthorized",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employee_types/1"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 02:03:03 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FleCO5gJvNBzB0wAAABJ"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "fc686cef-1d50-4bc4-9d61-eaa7a69a7ace",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employee_types/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "176"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 02:04:05 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FleCSfccAejwsSUAAABI"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {\n        \"employee_type\": {\n            \"id\": 1,\n            \"is_employee\": true,\n            \"name\": \"employee type 1\",\n            \"ref\": \"/api/v1/employee_types/1\"\n        }\n    },\n    \"message\": \"employee_type retrieved successfully\",\n    \"success\": true\n}"
+            }
+          ]
         },
         {
           "name": "delete",
@@ -9527,18 +9575,65 @@
           },
           "response": [
             {
-              "id": "20f7b1d3-893e-47e8-a09c-79d67efc2d1c",
-              "name": "200",
+              "id": "00cce33e-e8a1-41c1-a840-d6c8f8b2f56f",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "DELETE",
                 "header": [
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "SFMyNTY.M2MyNTVmNzAtMzhjYi00NTQzLTkyMWMtMTgwOTNjYTliODc1.dDWiIqSxwl-ncDbdSpJS3vJFcKFCEZ5EBeq7A-HOYl4"
+                    "value": "{{access_token}}"
                   }
                 ],
-                "url": "{{host}}/api/v1/positions/14"
+                "url": "{{host}}/api/v1/employee_types/1"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 02:03:13 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FleCPeYCd7jPgWkAAARF"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "a92933a0-55bd-4b95-ae2f-a19e9e83708b",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "url": "{{host}}/api/v1/employee_types/3"
               },
               "status": "OK",
               "code": 200,
@@ -9550,7 +9645,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "68"
+                  "value": "73"
                 },
                 {
                   "key": "content-type",
@@ -9558,7 +9653,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:27:47 GMT"
+                  "value": "Wed, 06 Jan 2021 02:06:49 GMT"
                 },
                 {
                   "key": "server",
@@ -9566,12 +9661,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTNdHENaK0QmGcAAEmB"
+                  "value": "FleCcCzpTcjHY4cAAABC"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"message\": \"Position deleted successfully\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {},\n    \"message\": \"employee_type deleted successfully\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -9604,27 +9699,83 @@
           },
           "response": [
             {
-              "id": "26f52807-d7ff-44c9-8643-3fa077783873",
-              "name": "200",
+              "id": "3730a3e0-ba70-423d-b427-32e41b4317ec",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "PUT",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "SFMyNTY.M2MyNTVmNzAtMzhjYi00NTQzLTkyMWMtMTgwOTNjYTliODc1.dDWiIqSxwl-ncDbdSpJS3vJFcKFCEZ5EBeq7A-HOYl4",
-                    "type": "text"
+                    "type": "text",
+                    "value": "{{access_token}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"position\": {\n        \"name\": \"position1\",\n        \"bill_rate\": 100.00,\n        \"cost\": 100.00,\n        \"daily_billable_hours\": 8,\n        \"start_date\": \"2020-05-01\",\n        \"end_date\": \"2020-06-01\",\n        \"employee_id\": 1,\n        \"project_id\": 2,\n        \"position_type_id\": 1\n    }\n}",
+                  "raw": "{\n    \"employee_type\": {\n        \"name\": \"employee type 1\",\n        \"is_employee\": true\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
                     }
                   }
                 },
-                "url": "{{host}}/api/v1/positions/14"
+                "url": "{{host}}/api/v1/employee_types/1"
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "max-age=0, private, must-revalidate"
+                },
+                {
+                  "key": "content-length",
+                  "value": "137"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Wed, 06 Jan 2021 02:03:25 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Cowboy"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "FleCQKIchtCVgRoAAADB"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
+            },
+            {
+              "id": "81f58fe0-5706-4cfe-8dcc-15ec13762e57",
+              "name": "200 OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "{{access_token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"employee_type\": {\n        \"name\": \"employee type 1\",\n        \"is_employee\": true\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{host}}/api/v1/employee_types/1"
               },
               "status": "OK",
               "code": 200,
@@ -9636,7 +9787,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "443"
+                  "value": "174"
                 },
                 {
                   "key": "content-type",
@@ -9644,7 +9795,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:26:35 GMT"
+                  "value": "Wed, 06 Jan 2021 02:04:19 GMT"
                 },
                 {
                   "key": "server",
@@ -9652,12 +9803,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTNY9uwmtdLCDcAAEiB"
+                  "value": "FleCTTX2NDBHBzYAAACH"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {\n        \"position\": {\n            \"bill_rate\": \"100.00\",\n            \"cost\": \"100.00\",\n            \"daily_billable_hours\": 8,\n            \"deleted_date\": null,\n            \"effective_end_date\": null,\n            \"effective_start_date\": \"2020-09-15T00:26:36.404673Z\",\n            \"employee_ref\": \"/api/v1/employees/1\",\n            \"end_date\": \"2020-06-01\",\n            \"id\": 15,\n            \"name\": \"position1\",\n            \"pid\": 14,\n            \"project_ref\": \"/api/v1/projects/2\",\n            \"ref\": \"/api/v1/positions/15\",\n            \"start_date\": \"2020-05-01\",\n            \"type\": \"type1\"\n        }\n    },\n    \"message\": \"Position updated successfully\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employee_type\": {\n            \"id\": 1,\n            \"is_employee\": true,\n            \"name\": \"employee type 1\",\n            \"ref\": \"/api/v1/employee_types/1\"\n        }\n    },\n    \"message\": \"employee_type updated successfully\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -9690,30 +9841,30 @@
           },
           "response": [
             {
-              "id": "19a3bf83-a20f-45ea-870d-9509a56bf70b",
-              "name": "400",
+              "id": "0ecff506-b6ce-4d0d-b42b-74a99cc1b408",
+              "name": "401 Unauthorized",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "SFMyNTY.NGU2MjUxZGEtNjE3MC00ZjFlLWIzOTUtNjJkM2VlYzQ1Zjhh.75RJzOo9OPsZb6Cm4mOSLYtGWSvFh7WUwMRvO3o5Rt8"
+                    "value": "{{access_token}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"position\": {\n        \"name\": \"position1\",\n        \"bill_rate\": 100.00,\n        \"cost\": 100.00,\n        \"daily_billable_hours\": 8,\n        \"start_date\": \"01/01/2020\",\n        \"end_date\": \"01/01/2020\",\n        \"employee_id\": 1,\n        \"project_id\": 1,\n        \"position_type_id\": 1\n    }\n}",
+                  "raw": "{\n    \"employee_type\": {\n        \"name\": \"employee type 2\",\n        \"is_employee\": true\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
                     }
                   }
                 },
-                "url": "{{host}}/api/v1/positions"
+                "url": "{{host}}/api/v1/employee_types"
               },
-              "status": "Bad Request",
-              "code": 400,
+              "status": "Unauthorized",
+              "code": 401,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -9722,7 +9873,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "139"
+                  "value": "137"
                 },
                 {
                   "key": "content-type",
@@ -9730,7 +9881,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:06:47 GMT"
+                  "value": "Wed, 06 Jan 2021 02:03:34 GMT"
                 },
                 {
                   "key": "server",
@@ -9738,35 +9889,35 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTMTxMlIYl_3TEAAD0B"
+                  "value": "FleCQt2VrSBqUnkAAASF"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"error_code\": 400,\n    \"errors\": \"end_date: is invalid, start_date: is invalid, \",\n    \"message\": \"Unable to create project\",\n    \"success\": false\n}"
+              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             },
             {
-              "id": "4afb5a81-7876-4bb7-907f-b3dae2b85b8c",
-              "name": "200",
+              "id": "d4a403e5-ecff-44f7-9f53-5fdec13ad0ea",
+              "name": "200 OK",
               "originalRequest": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "SFMyNTY.M2MyNTVmNzAtMzhjYi00NTQzLTkyMWMtMTgwOTNjYTliODc1.dDWiIqSxwl-ncDbdSpJS3vJFcKFCEZ5EBeq7A-HOYl4"
+                    "value": "{{access_token}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"position\": {\n        \"name\": \"position1\",\n        \"bill_rate\": 100.00,\n        \"cost\": 100.00,\n        \"daily_billable_hours\": 8,\n        \"start_date\": \"2020-05-01\",\n        \"end_date\": \"2020-06-01\",\n        \"employee_id\": 1,\n        \"project_id\": 2,\n        \"position_type_id\": 1\n    }\n}",
+                  "raw": "{\n    \"employee_type\": {\n        \"name\": \"employee type 2\",\n        \"is_employee\": true\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
                     }
                   }
                 },
-                "url": "{{host}}/api/v1/positions"
+                "url": "{{host}}/api/v1/employee_types"
               },
               "status": "OK",
               "code": 200,
@@ -9778,7 +9929,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "412"
+                  "value": "140"
                 },
                 {
                   "key": "content-type",
@@ -9786,7 +9937,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:24:31 GMT"
+                  "value": "Wed, 06 Jan 2021 02:04:29 GMT"
                 },
                 {
                   "key": "server",
@@ -9794,73 +9945,40 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "FjTNRvTamxJz0F0AAEWB"
+                  "value": "FleCT6xgofj0su4AAADH"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {\n        \"position\": {\n            \"bill_rate\": \"100.0\",\n            \"cost\": \"100.0\",\n            \"daily_billable_hours\": 8,\n            \"deleted_date\": null,\n            \"effective_end_date\": null,\n            \"effective_start_date\": \"2020-09-15T00:24:32.274553Z\",\n            \"employee_ref\": \"/api/v1/employees/1\",\n            \"end_date\": \"2020-06-01\",\n            \"id\": 14,\n            \"name\": \"position1\",\n            \"pid\": 14,\n            \"project_ref\": \"/api/v1/projects/2\",\n            \"ref\": \"/api/v1/positions/14\",\n            \"start_date\": \"2020-05-01\",\n            \"type\": \"type1\"\n        }\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
-            },
-            {
-              "id": "74540c01-e9c6-424c-baae-a9b793c1174c",
-              "name": "400 - employee_id: does not exist",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "SFMyNTY.NGU2MjUxZGEtNjE3MC00ZjFlLWIzOTUtNjJkM2VlYzQ1Zjhh.75RJzOo9OPsZb6Cm4mOSLYtGWSvFh7WUwMRvO3o5Rt8"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"position\": {\n        \"name\": \"position1\",\n        \"bill_rate\": 100.00,\n        \"cost\": 100.00,\n        \"daily_billable_hours\": 8,\n        \"start_date\": \"2020-05-01\",\n        \"end_date\": \"2020-06-01\",\n        \"employee_id\": 1,\n        \"project_id\": 1,\n        \"position_type_id\": 1\n    }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": "{{host}}/api/v1/positions"
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "cache-control",
-                  "value": "max-age=0, private, must-revalidate"
-                },
-                {
-                  "key": "content-length",
-                  "value": "122"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:08:27 GMT"
-                },
-                {
-                  "key": "server",
-                  "value": "Cowboy"
-                },
-                {
-                  "key": "x-request-id",
-                  "value": "FjTMZmGRig_v9OoAAFMF"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"error_code\": 400,\n    \"errors\": \"employee_id: does not exist, \",\n    \"message\": \"Unable to create project\",\n    \"success\": false\n}"
+              "body": "{\n    \"data\": {\n        \"employee_type\": {\n            \"id\": 3,\n            \"is_employee\": true,\n            \"name\": \"employee type 2\",\n            \"ref\": \"/api/v1/employee_types/3\"\n        }\n    },\n    \"message\": \"\",\n    \"success\": true\n}"
             }
           ]
         }
       ],
-      "_postman_id": "874ca565-6cd7-4a45-9b7c-2ec3d4b0fb6a"
+      "_postman_id": "874ca565-6cd7-4a45-9b7c-2ec3d4b0fb6a",
+      "description": "## Description\nThe Employee Types API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the employee types contact endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|is_employee|boolean|defines 'if' the contact is defined as an employee|no|yes||\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "32abd1d7-9d50-43e7-9758-c6058085dda2",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "53580b95-6a6b-4cc7-83ec-2d9937cd8fe7",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "positions",
@@ -11644,7 +11762,30 @@
           ]
         }
       ],
-      "_postman_id": "9f160d49-7602-4567-b53c-9f2083f9abb2"
+      "_postman_id": "9f160d49-7602-4567-b53c-9f2083f9abb2",
+      "description": "## Description\nThe Position Types API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the position types contact endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "a49eb6c9-b356-44d4-99a3-9e171ae6c76e",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "902d546d-68d3-4547-8e9a-5ba1bb81321a",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "daily_expenses",
