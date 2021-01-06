@@ -13418,7 +13418,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/regions/{{id}}"
+            "url": "{{host}}/api/v1/regions/{{id}}",
+            "description": "Update a specific region.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/regions/{{id}}\n```"
           },
           "response": [
             {
@@ -13503,7 +13504,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/regions"
+            "url": "{{host}}/api/v1/regions",
+            "description": "Create a specific region.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/regions/{{id}}\n```"
           },
           "response": [
             {
@@ -14864,7 +14866,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{host}}/api/v1/session?user[email]=admin@nxdomain.com&user[password]=123123123",
+              "raw": "{{host}}/api/v1/session?user[email]={{username}}&user[password]={{password}}",
               "host": [
                 "{{host}}"
               ],
@@ -14876,11 +14878,11 @@
               "query": [
                 {
                   "key": "user[email]",
-                  "value": "admin@nxdomain.com"
+                  "value": "{{username}}"
                 },
                 {
                   "key": "user[password]",
-                  "value": "123123123"
+                  "value": "{{password}}"
                 }
               ]
             }
