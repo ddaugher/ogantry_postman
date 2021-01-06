@@ -9149,7 +9149,8 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/employees/4"
+            "url": "{{host}}/api/v1/employees/4",
+            "description": "Delete a specific employee.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|number|path|id|yes|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/{{id}}\n```"
           },
           "response": [
             {
