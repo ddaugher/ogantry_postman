@@ -14320,7 +14320,30 @@
           ]
         }
       ],
-      "_postman_id": "fbdc9ea9-95df-401f-8e08-2e37a80c9692"
+      "_postman_id": "fbdc9ea9-95df-401f-8e08-2e37a80c9692",
+      "description": "## Description\nThe Work Exception Types API enables you to manage alerts using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the work exception types contact endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|contact name|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "a917470b-e5de-4b3e-bcb5-03d84f032ba0",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "f615c743-5aba-46b6-9c1d-c7ffe57ca0f9",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "daily_expense_types",
