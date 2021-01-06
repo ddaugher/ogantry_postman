@@ -8819,7 +8819,7 @@
               }
             },
             "url": "{{host}}/api/v1/employees/4",
-            "description": "## Description\nThe Employee API enables you to manage customers using the REST API.  This API is available for authenticated users, including OAuth apps.  Access token is required and user must have generic api_access enabled and 'user' permissions to the appropriate 'api_user_authorizations' entries for the employee endpoints.\n\n## Model\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|first_name|string|employee first name|no|yes|2|255\n|last_name|string|employee last name|no|yes|2|255\n|start_date|date|employee start date|no|yes|n/a|n/a\n|end_date|date|employee end date|2099-12-31|yes|n/a|n/a\n|daily_billable_hours|integer|daily billable hours|no|yes|0|8\n|email|string|employee email|no|yes|6|254\n|hourly_cost|decimal|employee hourly cost|no|yes|0|n/a\n|utilization_target|decimal|employee utilization target|no|yes|0.00|100.0\n|extended_fields|jsonb|extended fields associated with employee|no|no|n/a|n/a\n|employee_type_id|integer|id of associated employee type|no|yes|n/a|n/a\n|region_id|integer|id of associated region|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a"
+            "description": "Update a specific employee.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|employee id|\n|first_name|string|employee first name|no|yes|2|255\n|last_name|string|employee last name|no|yes|2|255\n|start_date|date|employee start date|no|yes|n/a|n/a\n|end_date|date|employee end date|2099-12-31|yes|n/a|n/a\n|daily_billable_hours|integer|daily billable hours|no|yes|0|8\n|email|string|employee email|no|yes|6|254\n|hourly_cost|decimal|employee hourly cost|no|yes|0|n/a\n|utilization_target|decimal|employee utilization target|no|yes|0.00|100.0\n|extended_fields|jsonb|extended fields associated with employee|no|no|n/a|n/a\n|employee_type_id|integer|id of associated employee type|no|yes|n/a|n/a\n|region_id|integer|id of associated region|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\n\n\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/1\n```"
           },
           "response": [
             {
@@ -8879,7 +8879,7 @@
               "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"Sorry, your account cannot be accessed at this time\",\n    \"success\": false\n}"
             },
             {
-              "id": "c597b195-aff0-4e2e-bc04-cf2c22f7a217",
+              "id": "3d8920c9-5e4b-4f37-9acf-18fcf07425d0",
               "name": "200 OK",
               "originalRequest": {
                 "method": "PUT",
@@ -8892,14 +8892,14 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"name\": \"employee1\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n        }\n}   ",
+                  "raw": "{\n     \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type_id\": 1,\n            \"end_date\": \"2020-09-14\",\n            \"hourly_cost\": \"200.00\",\n            \"first name\": \"first name\",\n            \"last name\": \"last name\",\n            \"region_id\": 1,\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            }\n        }\n}   ",
                   "options": {
                     "raw": {
                       "language": "json"
                     }
                   }
                 },
-                "url": "{{host}}/api/v1/employees/5"
+                "url": "{{host}}/api/v1/employees/6"
               },
               "status": "OK",
               "code": 200,
@@ -8911,7 +8911,7 @@
                 },
                 {
                   "key": "content-length",
-                  "value": "415"
+                  "value": "419"
                 },
                 {
                   "key": "content-type",
@@ -8919,7 +8919,7 @@
                 },
                 {
                   "key": "date",
-                  "value": "Wed, 06 Jan 2021 01:14:19 GMT"
+                  "value": "Wed, 06 Jan 2021 01:30:40 GMT"
                 },
                 {
                   "key": "server",
@@ -8927,12 +8927,12 @@
                 },
                 {
                   "key": "x-request-id",
-                  "value": "Fld_kshQ4Zia6AkAAAAI"
+                  "value": "FleAdxWHl-jSnr8AAAAC"
                 }
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"data\": {\n        \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type\": \"employee type 2\",\n            \"end_date\": \"2020-09-14\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            },\n            \"first_name\": \"first name\",\n            \"hourly_cost\": \"200.00\",\n            \"id\": 8,\n            \"last_name\": \"last_name\",\n            \"ref\": \"/api/v1/employees/8\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n    },\n    \"message\": \"Employee updated successfully\",\n    \"success\": true\n}"
+              "body": "{\n    \"data\": {\n        \"employee\": {\n            \"daily_billable_hours\": 8,\n            \"email\": \"e@e.com\",\n            \"employee_type\": \"employee type 2\",\n            \"end_date\": \"2020-09-14\",\n            \"extended_fields\": {\n                \"ext_number\": 2,\n                \"ext_string\": \"dog\"\n            },\n            \"first_name\": \"first name\",\n            \"hourly_cost\": \"200.00\",\n            \"id\": 10,\n            \"last_name\": \"last_name\\n\",\n            \"ref\": \"/api/v1/employees/10\",\n            \"region\": \"test\",\n            \"start_date\": \"2020-09-14\",\n            \"utilization_target\": \"100.00\"\n        }\n    },\n    \"message\": \"Employee updated successfully\",\n    \"success\": true\n}"
             }
           ]
         },
@@ -8960,7 +8960,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/employees"
+            "url": "{{host}}/api/v1/employees",
+            "description": "Create a specific employee.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required|\n|id|number|path|employee id|\n|first_name|string|employee first name|no|yes|2|255\n|last_name|string|employee last name|no|yes|2|255\n|start_date|date|employee start date|no|yes|n/a|n/a\n|end_date|date|employee end date|2099-12-31|yes|n/a|n/a\n|daily_billable_hours|integer|daily billable hours|no|yes|0|8\n|email|string|employee email|no|yes|6|254\n|hourly_cost|decimal|employee hourly cost|no|yes|0|n/a\n|utilization_target|decimal|employee utilization target|no|yes|0.00|100.0\n|extended_fields|jsonb|extended fields associated with employee|no|no|n/a|n/a\n|employee_type_id|integer|id of associated employee type|no|yes|n/a|n/a\n|region_id|integer|id of associated region|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a\n\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employees/1\n```"
           },
           "response": [
             {
