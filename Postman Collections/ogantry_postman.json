@@ -11056,7 +11056,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/positions"
+            "url": "{{host}}/api/v1/positions",
+            "description": "Create a specific position.\n\n# Parameters\n| Key | Format | Description | Auto-generated? | Required? | Minimum | Maximum\n| --- | --- | --- | --- | --- | --- | ---\n|Authorization|string|header|setting to Access Token is required| yes |\n|id|integer|id (auto-generated)|yes|n/a|n/a|n/a\n|name|string|name|no|yes|5|255\n|bill_rate|decimal|billing rate for the position|no|yes|0.00|n/a\n|cost|decimal|cost of the position, will override employee if set|no|no|0.00|n/a\n|daily_billable_hours|integer|daily hours expected to be billed|no|yes|0|8\n|start_date|date|start date of the position|no|yes|n/a|n/a\n|end_date|date|end date of the position|no|yes|n/a|n/a\n|extended_fields|jsonb|extended fields|no|no|n/a|n/a\n|employee_id|integer|id of associated employee|no|yes|n/a|n/a\n|project_id|integer|id of associated project|no|yes|n/a|n/a\n|position_type_id|integer|id of associated position type|no|yes|n/a|n/a\n|inserted_at|datetime|determined by the DBMS|yes|n/a\n|updated_at|datetime|determined by the DBMS|yes|n/a"
           },
           "response": [
             {
