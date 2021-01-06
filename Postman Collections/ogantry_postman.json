@@ -9341,7 +9341,7 @@
               }
             ],
             "url": "{{host}}/api/v1/employee_types",
-            "description": "Lists all employee_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|"
+            "description": "Lists all position_types.\n\n# Parameters\n| Name | Type | In | Description\n| --- | --- | --- | --- |\n|Authorization|string|header|Setting to Access Token is required|"
           },
           "response": [
             {
