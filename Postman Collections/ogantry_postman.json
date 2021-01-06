@@ -13458,7 +13458,7 @@
                 "type": "text"
               }
             ],
-            "url": "{{host}}/api/v1/regions/1"
+            "url": "{{host}}/api/v1/regions/{{id}}"
           },
           "response": []
         },
@@ -13477,7 +13477,7 @@
                 "value": "{{access_token}}"
               }
             ],
-            "url": "{{host}}/api/v1/regions/3"
+            "url": "{{host}}/api/v1/regions/{{id}}"
           },
           "response": [
             {
