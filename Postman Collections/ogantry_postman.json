@@ -13294,154 +13294,13 @@
               {
                 "key": "Authorization",
                 "value": "{{access_token}}",
+                "description": "access token acquired during session login or OAuth authentication",
                 "type": "text"
               }
             ],
             "url": "{{host}}/api/v1/regions"
           },
-          "response": [
-            {
-              "id": "1c744b08-4f36-4c14-bd50-f2d90434433d",
-              "name": "200",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "SFMyNTY.NGU2MjUxZGEtNjE3MC00ZjFlLWIzOTUtNjJkM2VlYzQ1Zjhh.75RJzOo9OPsZb6Cm4mOSLYtGWSvFh7WUwMRvO3o5Rt8",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{host}}/api/v1/positions"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "cache-control",
-                  "value": "max-age=0, private, must-revalidate"
-                },
-                {
-                  "key": "content-length",
-                  "value": "55"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:00:52 GMT"
-                },
-                {
-                  "key": "server",
-                  "value": "Cowboy"
-                },
-                {
-                  "key": "x-request-id",
-                  "value": "FjTL_Ljhagu9mDIAADSD"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"message\": \"No results found\",\n    \"success\": true\n}"
-            },
-            {
-              "id": "b3dbfb76-6332-474d-ab97-4ada2f2ba818",
-              "name": "200",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "SFMyNTY.M2MyNTVmNzAtMzhjYi00NTQzLTkyMWMtMTgwOTNjYTliODc1.dDWiIqSxwl-ncDbdSpJS3vJFcKFCEZ5EBeq7A-HOYl4",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{host}}/api/v1/positions"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "cache-control",
-                  "value": "max-age=0, private, must-revalidate"
-                },
-                {
-                  "key": "content-length",
-                  "value": "416"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "date",
-                  "value": "Tue, 15 Sep 2020 00:24:59 GMT"
-                },
-                {
-                  "key": "server",
-                  "value": "Cowboy"
-                },
-                {
-                  "key": "x-request-id",
-                  "value": "FjTNTWFPqOjH3R8AAEbB"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"data\": [\n        {\n            \"position\": {\n                \"bill_rate\": \"100.00\",\n                \"cost\": \"100.00\",\n                \"daily_billable_hours\": 8,\n                \"deleted_date\": null,\n                \"effective_end_date\": null,\n                \"effective_start_date\": \"2020-09-15T00:24:32.274553Z\",\n                \"employee_ref\": \"/api/v1/employees/1\",\n                \"end_date\": \"2020-06-01\",\n                \"id\": 14,\n                \"name\": \"position1\",\n                \"pid\": 14,\n                \"project_ref\": \"/api/v1/projects/2\",\n                \"ref\": \"/api/v1/positions/14\",\n                \"start_date\": \"2020-05-01\",\n                \"type\": \"type1\"\n            }\n        }\n    ],\n    \"message\": \"\",\n    \"success\": true\n}"
-            },
-            {
-              "id": "e126f4de-397d-47bb-828b-eff71211c836",
-              "name": "401",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{host}}/api/v1/positions"
-              },
-              "status": "Unauthorized",
-              "code": 401,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "cache-control",
-                  "value": "max-age=0, private, must-revalidate"
-                },
-                {
-                  "key": "content-length",
-                  "value": "86"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "date",
-                  "value": "Mon, 14 Sep 2020 23:53:07 GMT"
-                },
-                {
-                  "key": "server",
-                  "value": "Cowboy"
-                },
-                {
-                  "key": "x-request-id",
-                  "value": "FjTLkCibmgAfA8QAADxB"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"data\": {},\n    \"error_code\": 401,\n    \"errors\": \"Not Authenticated\",\n    \"message\": \"\",\n    \"success\": false\n}"
-            }
-          ]
+          "response": []
         },
         {
           "name": "get",
@@ -13650,7 +13509,7 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "SFMyNTY.NGU2MjUxZGEtNjE3MC00ZjFlLWIzOTUtNjJkM2VlYzQ1Zjhh.75RJzOo9OPsZb6Cm4mOSLYtGWSvFh7WUwMRvO3o5Rt8"
+                    "value": ""
                   }
                 ],
                 "body": {
