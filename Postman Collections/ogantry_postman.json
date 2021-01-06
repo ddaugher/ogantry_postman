@@ -9586,13 +9586,13 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{access_token}}",
-                "type": "text"
+                "type": "text",
+                "value": "{{access_token}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"employee_type\": {\n        \"name\": \"employee type 1\"\n    }\n}",
+              "raw": "{\n    \"employee_type\": {\n        \"name\": \"employee type 1\",\n        \"is_employee\": true\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -9685,7 +9685,8 @@
                 }
               }
             },
-            "url": "{{host}}/api/v1/employee_types"
+            "url": "{{host}}/api/v1/employee_types",
+            "description": "Create a specific employee_type.\n\n# Parameters\n| Name | Type | In | Description | Required?\n| --- | --- | --- | --- | --- |\n|Authorization|string|header|setting to Access Token is required| yes |\n|name|string|body|name|\n|is_employee|boolean|body|boolean indicating whether or not the employee type is an employee|\n\nExample URL w/ path params:\n```\n{{host}}/api/v1/employee_types/{{id}}\n```"
           },
           "response": [
             {
